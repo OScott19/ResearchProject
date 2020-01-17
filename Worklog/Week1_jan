@@ -1,0 +1,36 @@
+Log of work compelted in week 1!
+
+-Monday, 
+Applied for PhD (not much project work)
+
+-Tuesday: 
+Installed R packages required to run the crocodile packages
+Spent a while on this as had to download a number of extra packages (kept
+encountering errors) but got it to work and ran the crocodile file.
+Installed the fishtree of life R package (fishtree) and read the documentation
+
+- Wednesday:
+Read through 2x papers  (2007 original EDGE paper; 2010 comparison of EDGE,
+RE and PE methods) and wrote detailed notes, included questions and areas of 
+further research. 
+Experimentation with the fishtreeoflife (fishtree) Rpackage
+Looking up other sources of fish data
+Experimentation with RED list API 
+
+Thursday: 
+Came into the office! 
+Explored the fish tree of life website; downloaded several trees and phylogeny data 
+(unfortunatley this was wrong); downloaded the full Actinopterigii phylogenetic tree#
+
+Friday: 
+Bit of a slow day. Read through two more papers: Mooers 2008 and started Rabosky 2018. 
+Played around a bit more with the tree and sorted out some card admin with Rikki. 
+
+IN SUMMARY:
+-Progressed in familiarity with the IUCN list API and the Fishtree API (and website); did some reading
+
+For next week:
+-Type up all notes from the reading and read 2 more relevant papers
+-Get to grips with the Actinopterigii phylogenetic tree (in R)
+-Explore WoRMS
+

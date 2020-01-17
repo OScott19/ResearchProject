@@ -1,0 +1,58 @@
+Work carried over from last week: 
+
+-Reading papers and writing up notes
+-Plans to explore WoRMS
+-Plans to wrangle the phylogenetic tree of Actinopterigii spp
+
+
+-Monday: 
+Explored WoRMS online database; requested (and was granted) access to the underlying database
+This is because there are >50k allegedly relevant results on WoRMS, and you can only download
+data 1k entries at a time, which would be a huge waste of time. 
+
+-Tuesday
+Met fran
+Met Paul (also on EDGE - ex Silwoodian!)
+Met Imanol (Monni's PHD who knows a lot about fish)
+I have downloaded data on all of the Actinopterygii from the Red List
+Started to create my 'master table' in which I am going to compare 
+accross the various data sets
+I also had an interested meetign with Imanol - we went through some of the
+ICUN API functionality together. He has also provided me with some reading
+---
+Tomorrow I'm going to continue to fill in the table and chase WoRMS
+I'm also planning to take a look at the phylogenetic tree for Actinopterygii 
+
+-Weds
+Produtive day! Produced a list of all of the species that are present in both
+the RED list and the FToL database. 
+Then, created two seperate vectors containing all the spp found in one list 
+but not the other (FTonly and RLonly). 
+Ran a fuzzy search on all of the entries in the RLonly vector to check if there
+where species with only a 10% difference within the FTonly list (i.e. checking
+for spelling discrepancies). 
+End of day: have produced a vector containing all of the index references in fuzzy.list2
+of species that should NOT be included, and a list of species that need investigating. 
+
+Plan for tomorrow; actually chase WoRMS; investigate the species in the list (its short), 
+add the relevant species into the 'overlap' list that were missed because
+of spelling discrepancies (keeping the RL spelling, as these will be used to 
+reference the rating), then create a list of all of the viable spp. Convert
+their rankings into GE scores (refer to EDGE 2/ Rikki's paper). 
+Produce a short summary of this list of spp (i.e. how many families, how many
+in each family, etc etc. Highlight any groups that have >500spp in). 
+
+
+-Thursday
+Got the worms data!
+Spent HOURS trying to wrangle it into R (too large to load normally, and
+had lots of quirks - learned a whole bunch of new exclusions for read.table()
+Now have a complete list of all of the Actinopterygii in the WoRMS database. 
+Can continue with leftover work from Wednesday on Friday. 
+LATEST COMPLIcATION : look at why there is 0 overlap between WorMS and RL
+
+
+-Extrawork to do:
+Read Imanol's paper
+Read the Handbook of EUropean Freshwater Fish  (M Kottenlat)
+Familiarise self with the sampled red list index
