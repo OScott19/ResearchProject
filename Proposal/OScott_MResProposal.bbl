@@ -1,0 +1,595 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Barnosky2011a}{article}{}
+      \name{author}{12}{}{%
+        {{uniquename=0,uniquepart=base,hash=3210a30298cda34a8d0fd3d070cf81ec}{%
+           family={Barnosky},
+           familyi={B\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b3ee539e285dc0389395133f45269620}{%
+           family={Matzke},
+           familyi={M\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4bbcd74fb126a8776324f593e55306ac}{%
+           family={Tomiya},
+           familyi={T\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e616440ea56b8def4aade78fe7f8236}{%
+           family={Wogan},
+           familyi={W\bibinitperiod},
+           given={Guinevere\bibnamedelima O.U.},
+           giveni={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3809dcbffc6f5bab063465e34cce3f0b}{%
+           family={Swartz},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6e3c23bc90ae224fb091027448cbb744}{%
+           family={Quental},
+           familyi={Q\bibinitperiod},
+           given={Tiago\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e5fbe53a906a3757dbb0a4337082509}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=578c7041a4af29b5151c86f51a365000}{%
+           family={McGuire},
+           familyi={M\bibinitperiod},
+           given={Jenny\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0a6bd0565e21a1b119271303544a80e3}{%
+           family={Lindsey},
+           familyi={L\bibinitperiod},
+           given={Emily\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=70246e4df08b0928cd7aa556cdbbe5ca}{%
+           family={Maguire},
+           familyi={M\bibinitperiod},
+           given={Kaitlin\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d31b21c08e734dcc7f698f9b48f43bf}{%
+           family={Mersey},
+           familyi={M\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91d9c9ecd6ceb241a40eaf52921676c6}{%
+           family={Ferrer},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{fullhash}{98c4130410036367090023571dfe3bde}
+      \strng{bibnamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authorbibnamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authornamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authorfullhash}{98c4130410036367090023571dfe3bde}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Palaeontologists characterize mass extinctions as times when the Earth loses more than three-quarters of its species in a geologically short interval, as has happened only five times in the past 540million years or so. Biologists now suggest that a sixth mass extinction may be under way, given the known species losses over the past few centuries and millennia. Here we review how differences between fossil and modern data and the addition of recently available palaeontological information influence our understanding of the current extinction crisis. Our results confirm that current extinction rates are higher than would be expected from the fossil record, highlighting the need for effective conservation measures. {{$\copyright$}} 2011 Macmillan Publishers Limited. All rights reserved.}
+      \field{issn}{00280836}
+      \field{journaltitle}{Nature}
+      \field{number}{7336}
+      \field{title}{{Has the Earth's sixth mass extinction already arrived?}}
+      \field{volume}{471}
+      \field{year}{2011}
+      \field{pages}{51\bibrangedash 57}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nature09678
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/nature09678.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Faith2008}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3562ebf66cd4b295e173c4c73ac41ba3}{%
+           family={Faith},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \strng{fullhash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \strng{bibnamehash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \strng{authorbibnamehash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \strng{authornamehash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \strng{authorfullhash}{3562ebf66cd4b295e173c4c73ac41ba3}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{New species conservation strategies, including the EDGE of Existence (EDGE) program, have expanded threatened species assessments by integrating information about species' phylogenetic distinctiveness. Distinctiveness has been measured through simple scores that assign shared credit among species for evolutionary heritage represented by the deeper phylogenetic branches. A species with a high score combined with a high extinction probability receives high priority for conservation efforts. Simple hypothetical scenarios for phylogenetic trees and extinction probabilities demonstrate how such scoring approaches can provide inefficient priorities for conservation. An existing probabilistic framework derived from the phylogenetic diversity measure (PD) properly captures the idea of shared responsibility for the persistence of evolutionary history. It avoids static scores, takes into account the status of close relatives through their extinction probabilities, and allows for the necessary updating of priorities in light of changes in species threat status. A hypothetical phylogenetic tree illustrates how changes in extinction probabilities of one or more species translate into changes in expected PD. The probabilistic PD framework provided a range of strategies that moved beyond expected PD to better consider worst-case PD losses. In another example, risk aversion gave higher priority to a conservation program that provided a smaller, but less risky, gain in expected PD. The EDGE program could continue to promote a list of top species conservation priorities through application of probabilistic PD and simple estimates of current extinction probability. The list might be a dynamic one, with all the priority scores updated as extinction probabilities change. Results of recent studies suggest that estimation of extinction probabilities derived from the red list criteria linked to changes in species range sizes may provide estimated probabilities for many different species. Probabilistic PD provides a framework for single-species assessment that is well-integrated with a broader measurement of impacts on PD owing to climate change and other factors. {{$\copyright$}} 2008 Society for Conservation Biology.}
+      \field{issn}{08888892}
+      \field{journaltitle}{Conservation Biology}
+      \field{number}{6}
+      \field{title}{{Threatened species and the potential loss of phylogenetic diversity: Conservation scenarios based on estimated extinction probabilities and phylogenetic risk analysis}}
+      \field{volume}{22}
+      \field{year}{2008}
+      \field{pages}{1461\bibrangedash 1470}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1111/j.1523-1739.2008.01068.x
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/FAITH-2008-Conservation{\_}Biology.pdf:pdf
+      \endverb
+      \keyw{EDGE of existence,Expected diversity,Phylogenetic diversity,Probability of extinction,Red list,Risk analysis,Threatened species}
+    \endentry
+    \entry{Rabosky2018}{article}{}
+      \name{author}{36}{uniquelist=1}{%
+        {{uniquename=0,uniquepart=base,hash=3562ebf66cd4b295e173c4c73ac41ba3}{%
+           family={Faith},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a6810147be6bb6cc5dab65abfd2936bb}{%
+           family={Gumbs},
+           familyi={G\bibinitperiod},
+           given={Rikki},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7d10e71a39708e1371cf294db28941c8}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Claudia\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=443af9e6f3fe416d64d27a956420802f}{%
+           family={Wearn},
+           familyi={W\bibinitperiod},
+           given={Oliver\bibnamedelima R.},
+           giveni={O\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2deb86f9ea883370075b322dd8cae77a}{%
+           family={Owen},
+           familyi={O\bibinitperiod},
+           given={Nisha\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9e44ee7c918186f5b85df9f03fb3dbfe}{%
+           family={Isaac},
+           familyi={I\bibinitperiod},
+           given={Nick\bibnamedelima J.B.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b5bae7e5fc2af23478ca25729a7a2132}{%
+           family={Turvey},
+           familyi={T\bibinitperiod},
+           given={Samuel\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bafce2024fe121620a15913e7828045e}{%
+           family={Collen},
+           familyi={C\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=14dc3742ede67771e6fa289c6a80c800}{%
+           family={Waterman},
+           familyi={W\bibinitperiod},
+           given={Carly},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38ae0783b2d890ce9295ee22cdf349b7}{%
+           family={Baillie},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima E.M.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3210a30298cda34a8d0fd3d070cf81ec}{%
+           family={Barnosky},
+           familyi={B\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b3ee539e285dc0389395133f45269620}{%
+           family={Matzke},
+           familyi={M\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4bbcd74fb126a8776324f593e55306ac}{%
+           family={Tomiya},
+           familyi={T\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e616440ea56b8def4aade78fe7f8236}{%
+           family={Wogan},
+           familyi={W\bibinitperiod},
+           given={Guinevere\bibnamedelima O.U.},
+           giveni={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3809dcbffc6f5bab063465e34cce3f0b}{%
+           family={Swartz},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6e3c23bc90ae224fb091027448cbb744}{%
+           family={Quental},
+           familyi={Q\bibinitperiod},
+           given={Tiago\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e5fbe53a906a3757dbb0a4337082509}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=578c7041a4af29b5151c86f51a365000}{%
+           family={McGuire},
+           familyi={M\bibinitperiod},
+           given={Jenny\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0a6bd0565e21a1b119271303544a80e3}{%
+           family={Lindsey},
+           familyi={L\bibinitperiod},
+           given={Emily\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=70246e4df08b0928cd7aa556cdbbe5ca}{%
+           family={Maguire},
+           familyi={M\bibinitperiod},
+           given={Kaitlin\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d31b21c08e734dcc7f698f9b48f43bf}{%
+           family={Mersey},
+           familyi={M\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91d9c9ecd6ceb241a40eaf52921676c6}{%
+           family={Ferrer},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a88287b77340c082f0989440cb501ddc}{%
+           family={Mooers},
+           familyi={M\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3562ebf66cd4b295e173c4c73ac41ba3}{%
+           family={Faith},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=405ddf82e073ffbcfc3e0e875e59df3a}{%
+           family={Maddison},
+           familyi={M\bibinitperiod},
+           given={Wayne\bibnamedelima P.},
+           giveni={W\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5cf5ce595f763d40ed3d70f3feba85ce}{%
+           family={Rabosky},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3d88622a58367acf967bd61180f15c20}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=27449f9b2c8d089c53c7ebd4c914241f}{%
+           family={Title},
+           familyi={T\bibinitperiod},
+           given={Pascal\bibnamedelima O.},
+           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6dbaa295af189d17f9b00d42b055fed7}{%
+           family={Cowman},
+           familyi={C\bibinitperiod},
+           given={Peter\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=eb07b6a2d84d8d1bf46bf0a6a287c065}{%
+           family={Sallan},
+           familyi={S\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b37d2ff51c6cf0ad09136b633cfab5ff}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1cf849dfe4b73fa1397e900bce3560ae}{%
+           family={Kaschner},
+           familyi={K\bibinitperiod},
+           given={Kristin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=985bdb6916e3fbd7495c12ffbfbe6e09}{%
+           family={Garilao},
+           familyi={G\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3220f5ca18799aa4885c7799c820e38a}{%
+           family={Near},
+           familyi={N\bibinitperiod},
+           given={Thomas\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=17b447a7a598586953a86a58aedeec3f}{%
+           family={Coll},
+           familyi={C\bibinitperiod},
+           given={Marta},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=dd3e6e0aa99eaf9c4a5765aab757a784}{%
+           family={Alfaro},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{8229f761aa200e8fdb3b353d6f41743a}
+      \strng{fullhash}{977b75627c520d641b573f417457e54b}
+      \strng{bibnamehash}{8229f761aa200e8fdb3b353d6f41743a}
+      \strng{authorbibnamehash}{8229f761aa200e8fdb3b353d6f41743a}
+      \strng{authornamehash}{8229f761aa200e8fdb3b353d6f41743a}
+      \strng{authorfullhash}{977b75627c520d641b573f417457e54b}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background: Categories of imperilment like the global IUCN Red List have been transformed to probabilities of extinction and used to rank species by the amount of imperiled evolutionary history they represent (e.g. by the Edge of Existence programme). We investigate the stability of such lists when ranks are converted to probabilities of extinction under different scenarios. Methodology and Principal Findings: Using a simple example and computer simulation, we show that preserving the categories when converting such list designations to probabilities of extinction does not guarantee the stability of the resulting lists. Significance: Care must be taken when choosing a suitable transformation, especially if conservation dollars are allocated to species in a ranked fashion. We advocate routine sensitivity analyses. {{$\copyright$}} 2008 Mooers et al.}
+      \field{isbn}{4158601802731}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{11}
+      \field{title}{{Tetrapods on the EDGE: Overcoming data limitations to identify phylogenetic conservation priorities}}
+      \field{volume}{22}
+      \field{year}{2018}
+      \field{pages}{51\bibrangedash 57}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nature09678
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/Mamals{\_}EDGE{\_}Orig.pdf:pdf;:home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/journal.pone.0003700.PDF:PDF;:home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/FAITH-2008-Conservation{\_}Biology.pdf:pdf;:home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/Tetrapods{\_}EDGE{\_}RGumbs.pdf:pdf;:home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/s41586-018-0273-1.pdf:pdf;:home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/nature09678.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41586-018-0273-1
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/s41586-018-0273-1
+      \endverb
+      \keyw{EDGE of existence,Expected diversity,Phylogenetic diversity,Probability of extinction,Red list,Risk analysis,Threatened species}
+    \endentry
+    \entry{Gumbs2018}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=a6810147be6bb6cc5dab65abfd2936bb}{%
+           family={Gumbs},
+           familyi={G\bibinitperiod},
+           given={Rikki},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7d10e71a39708e1371cf294db28941c8}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Claudia\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=443af9e6f3fe416d64d27a956420802f}{%
+           family={Wearn},
+           familyi={W\bibinitperiod},
+           given={Oliver\bibnamedelima R.},
+           giveni={O\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2deb86f9ea883370075b322dd8cae77a}{%
+           family={Owen},
+           familyi={O\bibinitperiod},
+           given={Nisha\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5fed62e7c0335429ecaea8bc6c348bec}
+      \strng{fullhash}{d29eefb5f86ac916e9e53202bf5d2bf6}
+      \strng{bibnamehash}{5fed62e7c0335429ecaea8bc6c348bec}
+      \strng{authorbibnamehash}{5fed62e7c0335429ecaea8bc6c348bec}
+      \strng{authornamehash}{5fed62e7c0335429ecaea8bc6c348bec}
+      \strng{authorfullhash}{d29eefb5f86ac916e9e53202bf5d2bf6}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The scale of the ongoing biodiversity crisis requires both effective conservation prioritisation and urgent action. As extinction is non-random across the tree of life, it is important to prioritise threatened species which represent large amounts of evolutionary history. The EDGE metric prioritises species based on their Evolutionary Distinctiveness (ED), which measures the relative contribution of a species to the total evolutionary history of their taxonomic group, and Global Endangerment (GE), or extinction risk. EDGE prioritisations rely on adequate phylogenetic and extinction risk data to generate meaningful priorities for conservation. However, comprehensive phylogenetic trees of large taxonomic groups are extremely rare and, even when available, become quickly out-of-date due to the rapid rate of species descriptions and taxonomic revisions. Thus, it is important that conservationists can use the available data to incorporate evolutionary history into conservation prioritisation. We compared published and new methods to estimate missing ED scores for species absent from a phylogenetic tree whilst simultaneously correcting the ED scores of their close taxonomic relatives. We found that following artificial removal of species from a phylogenetic tree, the new method provided the closest estimates of their \textquotedblleft{}true\textquotedblright{} ED score, differing from the true ED score by an average of less than 1{\%}, compared to the 31{\%} and 38{\%} difference of the previous methods. The previous methods also substantially under- and over-estimated scores as more species were artificially removed from a phylogenetic tree. We therefore used the new method to estimate ED scores for all tetrapods. From these scores we updated EDGE prioritisation rankings for all tetrapod species with IUCN Red List assessments, including the first EDGE prioritisation for reptiles. Further, we identified criteria to identify robust priority species in an effort to further inform conservation action whilst limiting uncertainty and anticipating future phylogenetic advances.}
+      \field{isbn}{1111111111}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{4}
+      \field{title}{{Tetrapods on the EDGE: Overcoming data limitations to identify phylogenetic conservation priorities}}
+      \field{volume}{13}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0194680
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/Tetrapods{\_}EDGE{\_}RGumbs.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Isaac2007a}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=9e44ee7c918186f5b85df9f03fb3dbfe}{%
+           family={Isaac},
+           familyi={I\bibinitperiod},
+           given={Nick\bibnamedelima J.B.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b5bae7e5fc2af23478ca25729a7a2132}{%
+           family={Turvey},
+           familyi={T\bibinitperiod},
+           given={Samuel\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bafce2024fe121620a15913e7828045e}{%
+           family={Collen},
+           familyi={C\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=14dc3742ede67771e6fa289c6a80c800}{%
+           family={Waterman},
+           familyi={W\bibinitperiod},
+           given={Carly},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38ae0783b2d890ce9295ee22cdf349b7}{%
+           family={Baillie},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima E.M.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{fullhash}{5e7405df15b86159e5b65895b5a2dd45}
+      \strng{bibnamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authorbibnamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authornamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authorfullhash}{5e7405df15b86159e5b65895b5a2dd45}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Conservation priority setting based on phylogenetic diversity has frequently been proposed but rarely implemented. Here, we define a simple index that measures the contribution made by different species to phylogenetic diversity and show how the index might contribute towards species-based conservation priorities. We describe procedures to control for missing species, incomplete phylogenetic resolution and uncertainty in node ages that make it possible to apply the method in poorly known clades. We also show that the index is independent of clade size in phylogenies of more than 100 species, indicating that scores from unrelated taxonomic groups are likely to be comparable. Similar scores are returned under two different species concepts, suggesting that the index is robust to taxonomic changes. The approach is applied to a near-complete species-level phylogeny of the Mammalia to generate a global priority list incorporating both phylogenetic diversity and extinction risk. The 100 highest-ranking species represent a high proportion of total mammalian diversity and include many species not usually recognised as conservation priorities. Many species that are both evolutionarily distinct and globally endangered (EDGE species) do not benefit from existing conservation projects or protected areas. The results suggest that global conservation priorities may have to be reassessed in order to prevent a disproportionately large amount of mammalian evolutionary history becoming extinct in the near future. {{$\copyright$}} 2007 Isaac et al.}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{3}
+      \field{title}{{Mammals on the EDGE: Conservation priorities based on threat and phylogeny}}
+      \field{volume}{2}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0000296
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/Mamals{\_}EDGE{\_}Orig.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Steel2007}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=5d30f1613015984b38a2f60dfac80640}{%
+           family={Steel},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d0fe445413d3b7e443768de64864de82}{%
+           family={Mimoto},
+           familyi={M\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a88287b77340c082f0989440cb501ddc}{%
+           family={Mooers},
+           familyi={M\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9dd6e20522a6f22f31d8305d171080e4}
+      \strng{fullhash}{9dd6e20522a6f22f31d8305d171080e4}
+      \strng{bibnamehash}{9dd6e20522a6f22f31d8305d171080e4}
+      \strng{authorbibnamehash}{9dd6e20522a6f22f31d8305d171080e4}
+      \strng{authornamehash}{9dd6e20522a6f22f31d8305d171080e4}
+      \strng{authorfullhash}{9dd6e20522a6f22f31d8305d171080e4}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{If predictions for species extinctions hold, then the \textquoteleft{}tree of life' today may be quite different to that in (say) 100 years. We describe a technique to quantify how much each species is likely to contribute to future biodiversity, as measured by its expected contribution to phylogenetic diversity. Our approach considers all possible scenarios for the set of species that will be extant at some future time, and weights them according to their likelihood under an independent (but not identical) distribution on species extinctions. Although the number of extinction scenarios can typically be very large, we show that there is a simple algorithm that will quickly compute this index. The method is implemented and applied to the prosimian primates as a test case, and the associated species ranking is compared to a related measure (the \textquoteleft{}Shapley index'). We describe indices for rooted and unrooted trees, and a modifi cation that also includes the focal taxon's probability of extinction and which links two complementary approaches to conserving phylogenetic diversity.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{11769343}
+      \field{journaltitle}{Evolutionary Bioinformatics}
+      \field{title}{{Hedging our bets: The expected contribution of species to future phylogenetic diversity}}
+      \field{volume}{3}
+      \field{year}{2007}
+      \field{pages}{237\bibrangedash 244}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1177/117693430700300024
+      \endverb
+      \verb{eprint}
+      \verb 0704.2649
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/CMEECourseWork/ResearchProject/Readings/117693430700300024.pdf:pdf
+      \endverb
+      \keyw{Biodiversity conservation,Extinction,Phylogenetic diversity,Shapley index}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

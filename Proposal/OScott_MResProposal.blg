@@ -1,0 +1,20 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'OScott_MResProposal.blg'
+[25] biber:313> INFO - === Sat Dec 21, 2019, 14:59:07
+[47] Biber.pm:371> INFO - Reading 'OScott_MResProposal.bcf'
+[100] Biber.pm:857> INFO - Found 6 citekeys in bib section 0
+[111] Biber.pm:3981> INFO - Processing section 0
+[119] Biber.pm:4154> INFO - Looking for bibtex format file 'MResProposal.bib' for section 0
+[122] bibtex.pm:1468> INFO - LaTeX decoding ...
+[139] bibtex.pm:1294> INFO - Found BibTeX data source 'MResProposal.bib'
+[140] Utils.pm:169> WARN - Duplicate entry key: 'Rabosky2018' in file 'MResProposal.bib', skipping ...
+[220] Utils.pm:169> WARN - ISBN '4158601802731' in entry 'Rabosky2018' is invalid - run biber with '--validate_datamodel' for details.
+[236] Utils.pm:169> WARN - BibTeX subsystem: /tmp/56Szmq2GBt/MResProposal.bib_2226.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[254] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[255] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[255] Biber.pm:3809> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[255] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[267] bbl.pm:617> INFO - Writing 'OScott_MResProposal.bbl' with encoding 'ascii'
+[267] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
+[306] bbl.pm:720> INFO - Output to OScott_MResProposal.bbl
+[306] Biber.pm:110> INFO - WARNINGS: 3

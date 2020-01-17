@@ -1,0 +1,5 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'MResProposal.bib.blg'
+[34] biber:313> INFO - === Mon Dec  9, 2019, 13:46:16
+[169] Utils.pm:185> ERROR - Cannot find control file 'MResProposal.bib.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[170] Biber.pm:114> INFO - ERRORS: 1
