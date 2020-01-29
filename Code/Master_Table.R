@@ -13,10 +13,15 @@ library(ape) # analyses of phylogenetics and evolution
 library(dplyr)
 library(tidyr)
 library(ggplot2)
-
 library(rredlist)
 
+
+#set my working directory
+
+setwd("Documents/ResearchProject/Code/")
+
 # store Red list
+
 my.key <- c("30c68b19cedcc7f1cee81aa9b07e1cd235c49d9af8c184d76998b05e59a77c22") 
 
 # source(file = "Documents/CMEECourseWork/ResearchProject/Code/RedList_test.R")
@@ -45,6 +50,8 @@ fishtree <- data.frame()
 # subset fishbase for the correct class of fish
 act.data <- subset(fishbase, fishbase$Class=="Actinopterygii")
 
+head(act.data)
+
 # this creates a new col called GS and combines genus and species
 fishtree <- tidyr::unite(act.data, GS, Genus, Species, sep = " ")  
 
@@ -64,7 +71,7 @@ master.db$FToL.spp <- fishtree.50
 #import whole dataset
 # this was downloaded from the IUCN website, version 2019-3. If this version number
 # changes, then re-download the data (freely available)
-redlist.all <- read.csv("Documents/CMEECourseWork/ResearchProject/Data/redlist_species_data_84c02514-9a98-4c0b-92de-465f9605a0e3/assessments.csv", stringsAsFactors = F)
+redlist.all <- read.csv("../Data/redlist_species_data_84c02514-9a98-4c0b-92de-465f9605a0e3/assessments.csv", stringsAsFactors = F)
 
 #create data frame to hold the relevant redlist data
 redlist <- data.frame(matrix(ncol=2, nrow= length(master.db$All.spp)))
@@ -123,9 +130,9 @@ sorted <- unique.all$All.Species
 
 ### add zeroes to the end so it fits into into the master db
 
-all0 <- as.vector(rep(0, length(master.db$FToL.spp)-length(to.add)))
+all0 <- as.vector(rep(0, length(master.db$FToL.spp)-length(unique.all)))
 
-master.db$All.spp <- c(to.add, all0)
+master.db$All.spp <- c(unique.all, all0)
 
 
 # get list of unique values 
@@ -141,16 +148,22 @@ master.db$All.spp <- c(to.add, all0)
 
 
 #### Fish species that are present on both RedList and FToL:
-RNnFT <- intersect(fishtree$GS, redlist$RedList.species)
-length(RNnFT) # 16548 species are present on both lists 
+RLnFT <- intersect(fishtree$GS, redlist$RedList.species)
+length(RLnFT) # 16548 species are present on both lists 
 
+# Fish tree & Worms
 FTnW <- intersect(fishtree$GS, WoRMs.use$scientificName)
 length(FTnW) # 16773 species overlap
 
+# Red list & Worms
 RLnW <- intersect(redlist$RedList.species, WoRMs.use$scientificName)
-length(RLnW) # however, no species overlap between red list and worms. 
-####   oh dear ######
+length(RLnW) # 9850 species overlap
 
+# All three!
+
+all3 <- intersect(RLnFT, WoRMs.use$scientificName)
+length(all3) # 9253 spp
+length(unique(all3)) # 9252
 
 
 ### Fish species on Red list but NOT fish tree of life:
@@ -201,7 +214,6 @@ for (x in FTonly) {
 }
 check
 
-fuzzy.list2[[]]
 ##########################################################
 # Now, we are going to check if any of the RedList entries "nearly" match those 
 # in the Fish tree of life (i.e. - we are looking for typoes etc)
@@ -220,20 +232,6 @@ for (i in 1:length(RLonly)) {
   fuzzy.list2[[counter]] <- i
   fuzzy.list2[[counter]][2] <- RLonly[i]
   fuzzy.list2[[counter]][3] <- temp.data
-  }
-}
-
-
-### an even stricter search
-fuzzy.list3 <- list()
-counter <- 0
-for (i in 1:length(RLonly)) {
-  temp.data <- agrep(RLonly[i], FTonly, value=T, ignore.case = T, max.distance = 0.1)
-  if (length(temp.data != 0)) {
-    counter <- counter + 1
-    fuzzy.list3[[counter]] <- i
-    fuzzy.list3[[counter]][2] <- RLonly[i]
-    fuzzy.list3[[counter]][3] <- temp.data
   }
 }
 
@@ -276,5 +274,8 @@ investigate <- c(39,40, 58, 87,174,184,280,282,298,356,546, 576,604,655,
 dont.add.straight.away <- c(non.match, investigate)
 
 length(fuzzy.list2)-length(dont.add.straight.away)
+
+
+
 
 ##### RED LIST: KEEP SPECIES ID & SPECIES NAMES TOGETHER 
