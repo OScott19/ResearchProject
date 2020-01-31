@@ -26,6 +26,7 @@ my.key <- c("30c68b19cedcc7f1cee81aa9b07e1cd235c49d9af8c184d76998b05e59a77c22")
 
 # source(file = "Documents/CMEECourseWork/ResearchProject/Code/RedList_test.R")
 
+head(redlist.all)
 
 # initalising a dataframe of appropriate size
 # we are going to capture: fish tree of life species name, WoRMS species, Red List species, RL rank 

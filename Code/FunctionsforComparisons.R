@@ -31,42 +31,21 @@ RedOverlap <- function(RedName, RedCategory, RedID, DBName, counter, dataframe) 
 
   
 #### Add in family information 
-AddFam <- function(dataframe, DBName, DBOrder, DBFam) {
-    for (x in 1:length(dataframe[,1])) {
-    ref <- match(x, DBName[x])
-    dataframe[x,4] <- DBOrder[ref]
-    dataframe[x,5] <- DBFam[ref]
+AddFam <- function(DF1, DFName, DFOrder, DFFam) {
+    for (x in 1:length(DF1[,1])) {
+      ref <- match(as.character(DF1[x,1]), DFName)
+      DF1[x,4] <- DFOrder[ref]
+      DF1[x,5] <- DFFam[ref]
     }
   print("Family added!")
-  return(dataframe)
+  return(DF1)
   }
-
-AddFam <- function(RedName, RedCategory, RedID, DBName, counter, dataframe) {
-  start.time <- proc.time()[3]
-  print("Starting function")
-  for (x in 1:length(RedName)) {
-    # if the red list species is found on the  species list (i.e. match is True)
-    if ((RedName[x] %in% DBName)==T) {
-      # then add one to the counter, and add the species, its red list ID & category to the df
-      counter <- counter + 1
-      dataframe[counter,1] <-RedName[x]
-      dataframe[counter,2] <-RedCategory[x]
-      dataframe[counter,3] <-RedID[x] 
-    }
-  }
-  run.time <- proc.time()[3] - start.time
-  print(run.time)
-  print("funcion ending")
-  return(dataframe) # this will be stored in the variable the function is assigned to. 
-}
-
-
 
 
   
 #####
 #This function stores a list of species that are found in the Red list but not in an dataframe
-RedOnly <- function(RedName, RedCategory, RedID, DBFam, counter, dataframe) {
+RedOnly <- function(RedName, RedCategory, RedID, DBName, counter, dataframe) {
   print("Starting function")
   for (x in 1:length(RedName)) {
     if ((RedName[x] %in% DBName)==F) {
@@ -82,7 +61,7 @@ RedOnly <- function(RedName, RedCategory, RedID, DBFam, counter, dataframe) {
 }
 
 #This function stores a list of species are in the  dataframes but not in the red list
-NotOnly <- function(RedName, DBName, DBOrder, DBFam, counter, dataframe) {
+NotRed <- function(RedName, DBName, DBOrder, DBFam, counter, dataframe) {
   print("Starting function")
   for (x in 1:length(DBName)) {
     if ((DBName[x] %in% RedName)==F) {
@@ -97,33 +76,24 @@ NotOnly <- function(RedName, DBName, DBOrder, DBFam, counter, dataframe) {
   return(dataframe)
 }
 
+###### STRING EVERYTHING TOGETHER 
 
+#CompareTwo <- function(Resultlist, ) #### complete later
+# create a list, store the outputs of each function as list entries, and then return the list 
 
-  
 ###### TESTS
 
-test2variable <- RedOverlap(RedName = red$scientificName, RedCategory = red$redlistCategory, RedID = red$assessmentId, 
-     DBName = worms$scientificName, counter = 0, dataframe = test_yes2)
+#test_yes2 <- data.frame()
+#test2variable <- RedOverlap(RedName = red$scientificName, RedCategory = red$redlistCategory, RedID = red$assessmentId, 
+ #    DBName = worms$scientificName, counter = 0, dataframe = test_yes2)
 
-fam.added <- AddFam(dataframe = test2variable, DBName = worms$scientificName, DBFam = worms$family, DBOrder = worms$order)
+#fam.added <- AddFam(DF1 = test2variable, DFName = worms$scientificName, DFFam = worms$family, DFOrder = worms$order)
 
-
+#test_no3 <- data.frame()
 #testnovariable <- RedOnly(RedName = red$scientificName, RedCategory = red$redlistCategory, RedID = red$assessmentId, 
-#                            DBName = worms$scientificName, counter = 0, dataframe = test_no2)
+#                            DBName = worms$scientificName, counter = 0, dataframe = test_no3)
 
 
-
-
-  for (x in 1:length(test2variable[,1])) {
-    x = 10
-    
-    test2variable$v1[x]
-    worms$scientificName[ref]
-    ref
-    ref <- match(test2variable$V1[x], worms$scientificName)
-    test2variable[x,4] <- worms$order[ref]
-    test2variable[x,5] <- worms$family[ref]
-  }
-  print("Family added!")
-  return(dataframe)
-}
+#wormsonlydf <- data.frame()
+#wormsonly <- NotRed(RedName = red$scientificName, DBName = worms$scientificName, DBOrder = worms$order, DBFam = worms$family, 
+#                    counter = 0, dataframe = wormsonlydf)
