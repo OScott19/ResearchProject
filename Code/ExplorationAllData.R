@@ -1,6 +1,6 @@
 setwd("~/Documents/ResearchProject/Code/")
 
-james <- read.csv(file = "../Data/query_result.csv", sep = ",", fill = T, stringsAsFactors = F)
+#jamesdata <- read.csv(file = "../Data/query_result.csv", sep = ",", fill = T, stringsAsFactors = F)
 
 worms <- read.csv(file= "../Data/Full_Actiopterygii_WoRMS_data.csv",sep = ",", fill = T, stringsAsFactors = F)
 
@@ -49,6 +49,7 @@ length(unique(fb$SpecCode)) # 31759 - here we use species code rather than speci
 #Finally, add a column with the binomial name (useful for later comparisons)
 fb <- tidyr::unite(fb, "ScientificName", Genus, Species, sep = " ")  
 length(unique(fb$ScientificName)) # 31795
+write.csv(fb, file = "../Data/fb.csv", col.names = T) # save the useful data frame down to be used later
 
 ######## SUMMARY OF TREE DATA
 
@@ -67,7 +68,7 @@ tree <- as.character( sub("  ", " ", tree))
 tree <- as.character( sub("/t", " ", tree))
 tree <- as.character( sub("/n", " ", tree))
 
-
+write.csv(tree, file = "../Data/tree.csv", col.names = T) # save the useful data frame down to be used later
 ######## SUMMARY OF RED LIST DATA
 
 redlist.all <- read.csv("../Data/redlist_species_data_84c02514-9a98-4c0b-92de-465f9605a0e3/assessments.csv", stringsAsFactors = F)
@@ -77,7 +78,7 @@ head(redlist.all)
 usefulred <- c(1,2,3,4,14)
 
 red <- redlist.all[,usefulred]
-
+write.csv(red, file = "../Data/red.csv", col.names = T) # save the useful data frame down to be used later
 # species
 length(unique(red$scientificName)) #17955
 
@@ -120,7 +121,7 @@ sum(as.numeric(Sp.endangered[,4])) # 14.05%
 Sp.notendangered <- subset(conserv.status, conserv.status[,3]=="N")
 sum(as.numeric(Sp.notendangered[,2])) # 15445
 
-
+conserv.status
 
 
 

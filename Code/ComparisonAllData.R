@@ -17,19 +17,31 @@ library(ggplot2)
 library(rredlist)
 
 
-source("ExplorationAllData.R")
+#source("ExplorationAllData.R")
 source("FunctionsforComparisons.R")
 
-### what are our list of species?
+### IMPORT THE DATA THAT WE ARE COMPARING
 
 #WoRMS: worms$scientificName
+worms <- read.csv(file= "../Data/Full_Actiopterygii_WoRMS_data.csv",sep = ",", 
+                  fill = T, stringsAsFactors = F)
 
 #FishBase: fb$ScientificName
+fb <- read.csv(file = "../Data/fb.csv", header = T, sep = ",", stringsAsFactors = F, fill = T)
+fb <- fb[,-1]
 
 #FishTree: tree
 
+tree <- read.csv(file = "../Data/tree.csv", 
+                               header = T, sep = ",", stringsAsFactors = F, fill = T)
+tree <- as.data.frame(tree[,-1])
+colnames(tree) <- c("ScientificName")
+
 #IUCN: red$scientificName
 
+red <- read.csv(file = "../Data/red.csv", 
+                 header = T, sep = ",", stringsAsFactors = F, fill = T)
+red <- as.data.frame(red[,-1])
 #################
 ################# WORMS AND RED LIST 
 
@@ -86,6 +98,10 @@ FBandRed <- data.frame()
 FBandRed <- RedOverlap(RedName = red$scientificName, RedCategory = red$redlistCategory, 
                        RedID = red$assessmentId, DBName = fb$ScientificName, counter = 0, dataframe = FBandRed)
 
+colnames <- c("ScientificName", "RedStatus", "RedID", "Order", "Family")
+colnames(FBandRed) <-colnames
+
+
 ### add the family data
 FBandRed <- AddFam(DF1 = FBandRed, DFName = fb$ScientificName, DFOrder = fb$Order, DFFam = fb$Family)
 length(FBandRed$V1) # 16548
@@ -120,7 +136,7 @@ tree[,1] <- as.character(tree[,1])
 tree[,2] <- 0
 tree[,3] <- 0
 
-TnR <- intersect(tree$tree, red$scientificName)
+TnR <- intersect(tree$ScientificName, red$scientificName)
 length(TnR) # 16386
 
 
@@ -129,7 +145,7 @@ length(TnR) # 16386
 
 TreeandRed <- data.frame()
 TreeandRed <- RedOverlap(RedName = red$scientificName, RedCategory = red$redlistCategory, 
-                       RedID = red$assessmentId, DBName = tree$tree, counter = 0, dataframe = TreeandRed)
+                       RedID = red$assessmentId, DBName = tree$ScientificName, counter = 0, dataframe = TreeandRed)
 
 length(TreeandRed$V1) # 16386 - checks out with the intersect above :)
 
@@ -137,19 +153,19 @@ length(TreeandRed$V1) # 16386 - checks out with the intersect above :)
 
 RednotTree <- data.frame()
 RednotTree <- RedOnly(RedName = red$scientificName, RedCategory = red$redlistCategory, RedID = red$assessmentId, 
-                    DBName = tree$tree, counter = 0, dataframe = RednotTree   )
+                    DBName = tree$ScientificName, counter = 0, dataframe = RednotTree   )
 length(RednotTree$V1) # 1569 (before came up as 1407 - interesting!)
 
 ## and Tree not red
 TreenotRed <- data.frame()
-TreenotRed <- NotRed(RedName = red$scientificName, DBName = tree$tree, DBOrder = tree$V2, 
+TreenotRed <- NotRed(RedName = red$scientificName, DBName = tree$ScientificName, DBOrder = tree$V2, 
                    DBFam = tree$V2, counter = 0, dataframe = TreenotRed)
 length(TreenotRed$V1) # 15130
 
 ## now let's do a cheeky lil' check
 
 length(red$assessmentId) - (length(TreeandRed$V1) + length(RednotTree$V1)) # 0 - all checks out!
-length(tree$tree) - (length(TreeandRed$V1) + length(TreenotRed$V1)) # 0 - also checks out! 
+length(tree$ScientificName) - (length(TreeandRed$V1) + length(TreenotRed$V1)) # 0 - also checks out! 
 
 ############################################################################################
 ############################################################################################
@@ -231,7 +247,7 @@ for (x in 1:length(FBandRed$V1)) {
 FBandRed.subset <- subset(FBandRed, FBandRed$V6=="Y")
 colnames <- c("ScientificName", "RedStatus", "RedID", "Order", "Family", "Y")
 colnames(FBandRed.subset) <-colnames
-length(FBandRed.subset$V1)
+length(FBandRed.subset$ScientificName)
 length(every.df) # THEY ARE THE SAME <3
 
 
@@ -248,9 +264,9 @@ Summary[,1:5] <- WormsandRed.subset[,1:5]
 # the FishBase.subset, and pull it in from there
 
 for (x in 1:length(Summary$ScientificName)) {
-  ref <- match(Summary$ScientificName[x], FBandRed.subset$V1)
-  Summary$FBOrder[x] <-  FBandRed.subset$V4[ref]
-  Summary$FBFam[x] <- FBandRed.subset$V5[ref]
+  ref <- match(Summary$ScientificName[x], FBandRed.subset$ScientificName)
+  Summary$FBOrder[x] <-  FBandRed.subset$Order[ref]
+  Summary$FBFam[x] <- FBandRed.subset$Family[ref]
 }
 
 #### now we check if the families & orders are the same within FB and Worms - if there are, then this dataframe is *useful*
@@ -258,11 +274,11 @@ match.count.order <- 0
 match.no.order <- 0
 for (x in 1:length(Summary$ScientificName)) {
   if (Summary$WormsOrder[x] == Summary$FBOrder[x]) {
-    Summary$OrderCheck[x] <- as.factor(c("match"))
+    Summary$OrderCheck[x] <- c("match")
     match.count.order <- match.count.order + 1
   }
   else {
-    Summary$OrderCheck[x] <- as.factor(c("not"))
+    Summary$OrderCheck[x] <- c("not")
     match.no.order <- match.no.order + 1
   }
 }
@@ -286,6 +302,7 @@ for (x in 1:length(Summary$ScientificName)) {
 }
 
 match.count.fam + match.no.fam == length(Summary$ScientificName) # check all are accounted for 
+
 ###################################### SOME SUMMARY DATA
 
 length(unique(Summary$WormsOrder)) # 43
@@ -302,36 +319,28 @@ merge.fam <- c(Summary$WormsFam, Summary$FBFam)
 length(merge.fam)
 length(unique(merge.fam)) # so there are 2/4 extra fams. They do not contain the same 344 orders!
 
+#########################################################################################
+## at this point it feels prudent to save down the tables we have created, so we don't
+## need to re-run the whole script above before progressing
 
-#### let's get a breakdown of family endangered species-ness, shall we?
-stat.fam <- data.frame(matrix(nrow = length(unique(merge.fam)), ncol = 5))
-stat.fam.names <- c("Family", "#sppFB", "#sppWorms", "#endangered", "% endangered")
-colnames(stat.fam) <- stat.fam.names
+write.csv(FBandRed, file="../Data/FBandRed.csv", col.names = T)
+write.csv(FBnotRed, file="../Data/FBnotRed.csv", col.names = T)
+write.csv(RednotFB, file="../Data/RednotFB.csv", col.names = T)
 
-stat.fam[,1] <- unique(merge.fam)
+write.csv(WormsandRed, file="../Data/WormsandRed.csv", col.names = T)
+write.csv(WormsnotRed, file="../Data/WormsnotRed.csv", col.names = T)
+write.csv(RednotWorms, file="../Data/RednotWorms.csv", col.names = T)
 
-for (i in 1:length(stat.fam$Family)) {
-  
-}
+write.csv(TreeandRed, file="../Data/TreeandRed.csv", col.names = T)
+write.csv(TreenotRed, file="../Data/TreenotRed.csv", col.names = T)
+write.csv(RednotTree, file="../Data/RednotTree.csv", col.names = T)
 
-
-########################################
-##############################################################
-#########################################
-# PICK BACK UP HERE!!!
-# use table to find family numbers numbers 
-# write for loop to subset data by family, and then count the number of endangered species
-# (tabulate, and then sum the columns with the thre categories of "endangered")
-# save this down and then enter it in the master table
-# then do the same thing for the other database
-# THEN use table to find number of species within whole family group (go back to total database)
-# add to table for perspective 
+write.csv(Summary, file="../Data/Summary.csv", col.names = T)
 
 
-FBorders <- data.frame()
-FBorders <- table(FBandRed.subset$Order)
+####################################################################
+####################################################################
 
-head(FBorders)
 
 ##### test this later - code from Adam
 data<-read.csv("Copy of JetzTree_seabirds_TClay.csv",h=T)
