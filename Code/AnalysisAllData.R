@@ -7,15 +7,14 @@ source("ImportData.R")
 
 
 
-
 ###############################################
 
 
 list.of.fam <- unique(c(Summary$WormsFam, Summary$FBFam))
 
 #### let's get a breakdown of family endangered species-ness, shall we?
-fam.stats <- data.frame(matrix(nrow = length(list.of.fam), ncol = 5))
-fam.stats.cols <- c("Family", "sppFB", "sppWorms", "endangered", "percent_endangered")
+fam.stats <- data.frame(matrix(nrow = length(list.of.fam), ncol = 7))
+fam.stats.cols <- c("Family", "sppFB", "sppWorms", "endangered_FB", "endangered_Worms", "percent_endangered_FB", "percent_endangered_Worms")
 colnames(fam.stats) <- fam.stats.cols
 
 fam.stats[,1] <- list.of.fam # add in the list of all of the families accross 
@@ -44,12 +43,56 @@ for (x in 1:length(Summary$X)) {
     }
 }
 
-for (x in 1:length(fam.stats$Family) {
-  temp <- subset(Summary, Summary$
+
+### now we want to add the total number of secies within each family group that is marked as endangered 
+
+for (x in 1:length(fam.stats$Family)) {
+  if (fam.stats$Family[x] %in% Summary$WormsFam) {
+  worm.temp <- subset(Summary, Summary$WormsFam == fam.stats$Family[x])
+  worm.temp <- subset(worm.temp, worm.temp$V11 == "y")
+  temp.endangered.count <- length(worm.temp$V11)
+  fam.stats$endangered_Worms[x] <- temp.endangered.count
+  }
+  
+  if (fam.stats$Family[x] %in% Summary$FBFam) {
+    worm.temp <- subset(Summary, Summary$FBFam == fam.stats$Family[x])
+    worm.temp <- subset(worm.temp, worm.temp$V11 == "y")
+    temp.endangered.count <- length(worm.temp$V11)
+    fam.stats$endangered_FB[x] <- temp.endangered.count
+  }
 }
 
 
-########################################
+#######
+
+
+for (x in 1:length(fam.stats$Family)) {
+    fam.stats$percent_endangered_FB[x] <- as.numeric(fam.stats$endangered_FB[x] / fam.stats$sppFB[x]) * 100
+    fam.stats$percent_endangered_Worms[x] <- as.numeric(fam.stats$endangered_Worms[x] / fam.stats$sppWorms[x]) * 100
+}
+
+#####
+###### create global picture 
+
+worms.fam.all <- table(worms$family)
+worms.order.all <- table(worms$order)
+
+fb.fam.all <- table(fb$Family)
+fb.order.all <- table(fb$Order)
+
+
+####################
+
+check_list <- c()
+
+for (x in 1:length(fam.stats$Family)) {
+  if (fam.stats$endangered_FB[x] != fam.stats$endangered_Worms[x]) {
+    print(x)
+    check_list <- c(check_list, as.integer(x))
+  }
+}
+
+#######################################
 ##############################################################
 #########################################
 # PICK BACK UP HERE!!!

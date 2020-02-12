@@ -98,13 +98,48 @@ FBandRed <- data.frame()
 FBandRed <- RedOverlap(RedName = red$scientificName, RedCategory = red$redlistCategory, 
                        RedID = red$assessmentId, DBName = fb$ScientificName, counter = 0, dataframe = FBandRed)
 
-colnames <- c("ScientificName", "RedStatus", "RedID", "Order", "Family")
-colnames(FBandRed) <-colnames
 
 
 ### add the family data
 FBandRed <- AddFam(DF1 = FBandRed, DFName = fb$ScientificName, DFOrder = fb$Order, DFFam = fb$Family)
 length(FBandRed$V1) # 16548
+
+
+fbandred.familytable <- table(FBandRed$Family)
+head(fbandred.familytable)
+fbandred.familytable <- as.data.frame(fbandred.familytable)
+FBRT <- arrange(fbandred.familytable, Freq)
+tail(FBRT, 10)
+
+fbandred.statustable <- table(FBandRed$RedStatus)
+fbandred.statustable <- as.data.frame(fbandred.statustable)
+fbandred.statustable
+
+
+for (x in 1:length(FBandRed$RedStatus)) {
+  if (FBandRed$RedStatus[x] == "Extinct" | FBandRed$RedStatus[x] == "Extinct in the Wild"
+      | FBandRed$RedStatus[x] == "Endangered" | FBandRed$RedStatus[x] =="Critically Endangered" |
+      FBandRed$RedStatus[x] == "Vulnerable" ) {
+    FBandRed$V6[x] <- c("y") 
+  }
+}
+
+fbandred.familytable[,1] <- as.character(fbandred.familytable[,1])
+
+
+
+for (x in 1:length(fbandred.familytable$Var1)) {
+    temp <- subset(FBandRed, FBandRed$Family == fbandred.familytable$Var1[x])
+    temp2 <- subset(temp, temp$V6 == "y")
+    temp.endangered.count <- as.numeric(length(temp2$ScientificName))
+    fbandred.familytable[x,3] <- temp.endangered.count
+  }
+
+
+
+#and column names 
+colnames <- c("ScientificName", "RedStatus", "RedID", "Order", "Family")
+colnames(FBandRed) <-colnames
 
 ###### 
 
@@ -123,8 +158,8 @@ length(FBnotRed$V1) # 15211
 
 ## now let's do a cheeky lil' check
 
-length(red$assessmentId) - (length(FBandRed$V1) + length(RednotFB$V1)) # 0 - all checks out!
-length(fb$ScientificName) - (length(FBandRed$V1) + length(FBnotRed$V1)) # 0 - also checks out! 
+length(red$assessmentId) - (length(FBandRed$ScientificName) + length(RednotFB$V1)) # 0 - all checks out!
+length(fb$ScientificName) - (length(FBandRed$ScientificName) + length(FBnotRed$V1)) # 0 - also checks out! 
 
 
 
@@ -337,6 +372,9 @@ write.csv(RednotTree, file="../Data/RednotTree.csv", col.names = T)
 
 write.csv(Summary, file="../Data/Summary.csv", col.names = T)
 
+
+RedSPnames <- red$scientificName
+write.csv(RedSPnames, file = "../Data/LifeWatchtest.csv", col.names = T, sep = ",")
 
 ####################################################################
 ####################################################################

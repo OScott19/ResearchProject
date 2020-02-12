@@ -18,7 +18,7 @@ my.key <- c("30c68b19cedcc7f1cee81aa9b07e1cd235c49d9af8c184d76998b05e59a77c22")
 # downloaded the Red List data for Actinopterygii - 17995 results!
 
 #import whole dataset
-redlist.all <- read.csv("Documents/CMEECourseWork/ResearchProject/Data/redlist_species_data_84c02514-9a98-4c0b-92de-465f9605a0e3/assessments.csv")
+redlist.all <- read.csv("~/Documents/ResearchProject/Data/redlist_species_data_84c02514-9a98-4c0b-92de-465f9605a0e3/assessments.csv")
 
 #create vector with just the data we need right now
 redlist <- c()

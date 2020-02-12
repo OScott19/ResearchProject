@@ -50,6 +50,26 @@ Actinop <- subset(total, total$class=="Actinopterygii")
 Actiop.spp <- subset(Actinop, Actinop$taxonRank=="species")
 # save this beautiful data down 
 write.csv(Actiop.spp, file = "../Data/Full_Actiopterygii_WoRMS_data.csv")
-usefulcols <- c(6,14,15,16)
 
+worms.data <- read.csv(file = "../Data/Full_Actiopterygii_WoRMS_data.csv", stringsAsFactors = F)
+head(worms.data)
+worms.data <- worms.data[,-1]
+usefulcols <- c(7, 8, 15,16,17,18,19,20,24)
+colnames <- as.character(worms.data[1,])
+
+worms.use <- worms.data[,usefulcols]
+worms.accepted <- subset(worms.use, worms.use$taxonomicStatus=="accepted")
+length(worms.accepted$scientificName) # 17610
+
+
+# + taxanomic status, 
 WoRMs.use <- Actiop.spp[,usefulcols]
+
+
+head(worms)
+worms <- worms[,-1]
+
+worms <- worms[,usefulcols]
+length(worms$scientificName)
+length(unique(worms$scientificName))
+ 

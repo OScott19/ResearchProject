@@ -26,6 +26,13 @@ length(unique(WoRMs.use$genus)) # 6300
 #species
 length(unique(WoRMs.use$scientificName)) #45629
 
+
+worms.fam.table <- table(worms$family)
+worms.fam.table <- as.data.frame(worms.fam.table)
+worms.fam.table <- arrange(worms.fam.table, Freq)
+tail(worms.fam.table, 10)
+
+
 ######## SUMMARY OF FISHBASE DATA 
 
 fb <- subset(fishbase, fishbase$Class=="Actinopterygii")
@@ -50,6 +57,15 @@ length(unique(fb$SpecCode)) # 31759 - here we use species code rather than speci
 fb <- tidyr::unite(fb, "ScientificName", Genus, Species, sep = " ")  
 length(unique(fb$ScientificName)) # 31795
 write.csv(fb, file = "../Data/fb.csv", col.names = T) # save the useful data frame down to be used later
+
+
+
+
+
+fb.fam.table <- table(fb$Family)
+fb.fam.table <- as.data.frame(fb.fam.table)
+fb.fam.table <- arrange(fb.fam.table, Freq)
+tail(fb.fam.table, 10)
 
 ######## SUMMARY OF TREE DATA
 
@@ -78,6 +94,73 @@ head(redlist.all)
 usefulred <- c(1,2,3,4,14)
 
 red <- redlist.all[,usefulred]
+
+
+### create a list to store the results in  
+# loop through each of the 'scientific names', do a rl_search for that name (parse = T, want in DF)
+# store a) search name (i) b) results 
+
+library(rredlist)
+red.tax3 <- list()
+red.tax4 <- list ()
+
+library(rredlist)
+
+for (i in 1:2000) {
+  x <- i + 7000
+  red.tax4[[x]] <- rl_search_(name = red$scientificName[x], key = my.key, parse = F)
+  
+  if (x %% 50 == 0) {
+    Sys.sleep(2)
+    print(c("sleep:", i))
+    #write.csv(red.tax4, file = "../Data/redtaxa4.Rdata", col.names = T)
+  }
+}
+
+install.packages("jsonlite")
+library(tidyr)
+library(dplyr)
+
+test.list <- tax4_lunlist[1:10]
+test.list
+
+?tidyjson
+install.packages("tidyjson")
+
+
+test2 <- tidyjson::read_json(test.list, format = "jsonl")
+
+json.convert.test <- as.data.frame(sapply(test.list, jsonlite::fromJSON(test.list)))
+
+a <- jsonlite::fromJSON(rl_search_(name = red$scientificName[1], key = my.key))
+
+b <- rl_search_(name = red$scientificName[1], key = my.key)
+
+cc <-as.data.frame(jsonlite::fromJSON(bb))
+
+bb <- cbind(b,b)
+
+test3 <- red.tax4
+
+ee <- jsonlite::fromJSON(sprintf("[%s]", paste(readLines(test3), collapse = ",")))
+
+load("../Data/redtaxa3.Rdata")
+
+
+save(red.tax4, file = "../Data/redtaxa4.Rdata", col.names = T)
+save(red.tax3, file = "../Data/redtaxa3_2.Rdata", col.names = T) # save the useful list to be used later
+
+
+load(file = "../Data/")
+
+
+cheese <- read(file = "../Data/redtaxa3.Rdata", col.names = T)
+install.packages("jsonlite")
+
+
+####
+
+
 write.csv(red, file = "../Data/red.csv", col.names = T) # save the useful data frame down to be used later
 # species
 length(unique(red$scientificName)) #17955
@@ -108,6 +191,8 @@ for (i in red$redlistCategory) {
   }
 }
 
+
+
 for (x in 1:11) {
   percent <- as.numeric(conserv.status[x,2]) / sum(as.numeric(conserv.status[,2]))*100
   conserv.status[x,4] <- round(percent, digits = 2) 
@@ -125,4 +210,19 @@ conserv.status
 
 
 
+#### Doing some basic exploration of the phylogenetic tree file data 
+FTdata <- read.csv(file = "../Data/PFC_taxonomy.csv", sep = ",", header = T, stringsAsFactors = F)
+FTdata2 <- subset(FTdata, FTdata$class=="Actinopteri")
 
+FTdata.famtable <- table(FTdata2$family)
+head(FTdata.famtable)
+
+FTdata.famtable <- order(FTdata.famtable$Freq)
+
+library(dplyr)
+
+
+
+length(FTdata.famtable)
+FTdata.ordertable <- table(FTdata2$order)
+length(FTdata.ordertable)
