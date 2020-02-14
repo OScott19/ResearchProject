@@ -60,9 +60,10 @@ colnames <- as.character(worms.data[1,])
 worms.use <- worms.data[,usefulcols]
 worms.accepted <- subset(worms.use, worms.use$taxonomicStatus=="accepted")
 length(worms.accepted$scientificName) # 17610
+length(unique(worms.accepted$scientificName))
+length(unique(worms.accepted$acceptedNameUsage))
 
-
-# + taxanomic status, 
+  # + taxanomic status, 
 WoRMs.use <- Actiop.spp[,usefulcols]
 
 

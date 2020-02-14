@@ -122,6 +122,11 @@ for (x in 1:length(FBandRed$RedStatus)) {
       FBandRed$RedStatus[x] == "Vulnerable" ) {
     FBandRed$V6[x] <- c("y") 
   }
+  
+  else {
+    FBandRed$V6[x] <- c("n")
+  }
+    
 }
 
 fbandred.familytable[,1] <- as.character(fbandred.familytable[,1])
@@ -252,7 +257,7 @@ length(every.df) # 9149
 # species name
 # RedID
 # RedStatus
-# family
+# famil|
 # order 
 
 # I've already added in the species and order to two. So, I can go through WoRMS and FishBase, 
@@ -373,8 +378,8 @@ write.csv(RednotTree, file="../Data/RednotTree.csv", col.names = T)
 write.csv(Summary, file="../Data/Summary.csv", col.names = T)
 
 
-RedSPnames <- red$scientificName
-write.csv(RedSPnames, file = "../Data/LifeWatchtest.csv", col.names = T, sep = ",")
+#RedSPnames <- red$scientificName
+#write.csv(RedSPnames, file = "../Data/LifeWatchtest.csv", col.names = T, sep = ",")
 
 ####################################################################
 ####################################################################
@@ -398,3 +403,79 @@ for(i in 1:length(extracted_list_ABSENT)){
     missing.numbers <- c(missing.numbers, i)}}
 missing.numbers
 (missing.species <- as.character(data$Scientific[missing.numbers]))
+
+
+
+###
+
+)
+head(fbandred.familytable)
+
+fbandred.familytable[,4] <- 0
+fbandred.familytable[,5:7]<- 0
+coln <- c("Family", "NoSpeciesAssessed", "NoEndangeredSp", "ProportionEndangered-Assessed", "TotalSpp", "ProportionAssessed", "ProportionEndangered-Total")
+colnames(fbandred.familytable) <- coln
+
+fb.fam.table <- table(fb$Family)
+fb.fam.table <- as.data.frame(fb.fam.table)
+
+fb.ctable <- fb.fam.table
+fb.ctable[3:7] <- 0
+coln2 <- c("Family", "TotalSpp", "NoSpeciesAssessed",  "ProportionAssessed", "NoEndangeredSp", "ProportionEndangered-Assessed", "ProportionEndangered-Total")
+colnames(fb.ctable) <- coln2
+
+length(fb.ctable$Family)
+
+### adding the number of species that have been assessed 
+for (x in 1:length(fb.ctable$Family)) {
+  #x = 1
+  temp <- as.numeric(match(fb.ctable$Family[x], fbandred.familytable$Family))
+  if (is.na(temp) == F ) {
+  fb.ctable$NoSpeciesAssessed[x] <- fbandred.familytable$NoSpeciesAssessed[temp]
+  }
+  if (is.na(temp) == T ) {
+    fb.ctable$NoSpeciesAssessed[x] <- NA
+  }
+}
+fb.ctable$NoSpeciesAssessed <- as.numeric(fb.ctable$NoSpeciesAssessed)
+length(is.na(fb.ctable$NoSpeciesAssessed))
+
+# calculating the proportion of species that have been assessed
+fb.ctable$ProportionAssessed <- fb.ctable$NoSpeciesAssessed / fb.ctable$TotalSpp * 100
+
+
+## addin the numer of species that are endangered!
+# subset by fam
+# subset by whether they're endangered (y or n)
+# add length of criteria to number of endangered species
+
+
+for (x in 1:length(fb.ctable$Family)) {
+  if (fb.ctable$Family[x] %in% FBandRed$Family) {
+    temp <- subset(FBandRed, FBandRed$Family == fb.ctable$Family[x])
+    temp2 <- subset(temp, temp$V6 == "y")
+    temp.endangered.count <- as.numeric(length(temp2$ScientificName))
+    fb.ctable$NoEndangeredSp[x] <- temp.endangered.count
+  }
+  else {
+    fb.ctable$NoEndangeredSp[x] <- NA
+  }
+}
+
+fb.ctable$`ProportionEndangered-Assessed` <- fb.ctable$NoEndangeredSp / fb.ctable$NoSpeciesAssessed * 100
+
+fb.ctable$`ProportionEndangered-Total` <- fb.ctable$NoEndangeredSp / fb.ctable$TotalSpp * 100
+
+#### exploration time!
+
+half.assessed <- subset(fb.ctable, fb.ctable$ProportionAssessed >= 50)
+
+
+
+save(fb.ctable, file = "../Data/RedListFishBaseFamilyAnalysis.Rdata")
+load("../ojs19/Documents/ResearchProject/Data/TABLE_WORKINPROGRESS.Rdata")
+
+#####
+
+
+##################### PICK UP HERE KEEP FILLINGIN THE TABLE ########################

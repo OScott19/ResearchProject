@@ -21,7 +21,8 @@ library(tidyr)
 library(ggplot2)
 
 library(rredlist)
-
+#install.packages("caper")
+library(caper)
 
 
 
@@ -114,5 +115,28 @@ total.num.species <- fishlist.breakdown[2:no(fishlist.breakdown),2]
 total.num.species
 
 
+act.tree <- read.tree("../Data/actinopt_full.trees")
+
+act.tree <- act.tree[[1]]
+
+act.tree <- drop.tip(act.tree, act.tree$tip.label[grep("Hippocampus_", act.tree$tip.label)])
+
+grep("Hippocampus_", act.tree$tip.label)
+
+act.tree$tip.label
+
+a <- grep("Polypterus_",act.tree$tip.label)
+act.tree.2 <- drop.tip(act.tree, act.tree$tip.label[-a])
+
+a <- getMRCA(act.tree,a)
+
+install.packages("phylobase")
+library(phylobase)
+act.tree$edge.length
+act.tree$edge
+act.tree$Nnode
+
+
+a.ed <- ed.calc(act.tree)$spp
 
 
