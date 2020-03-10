@@ -97,7 +97,7 @@ Fish.orders.vector <- read.csv(file="Fish_orders.csv", header = F, sep ="")
 #Fish.orders.list <- as.list(Fish.orders.vector, sep="/n")
 
 
-fishlist.breakdown <- read.csv(file="Fishlist_breakdown.CSV", header = T, sep = ",", stringsAsFactors = F)
+fishlist.breakdown <- read.csv(file="../Data/Fishlist_breakdown.CSV", header = T, sep = ",", stringsAsFactors = F)
 fishlist.breakdown[,2] <- as.numeric(fishlist.breakdown[,2])
 fishlist.breakdown[,3] <- as.numeric(fishlist.breakdown[,3])
 fishlist.breakdown <- as.data.frame(fishlist.breakdown[,-4])
@@ -118,6 +118,7 @@ total.num.species
 act.tree <- read.tree("../Data/actinopt_full.trees")
 
 act.tree <- act.tree[[1]]
+#act.tree <- or_this
 
 act.tree <- drop.tip(act.tree, act.tree$tip.label[grep("Hippocampus_", act.tree$tip.label)])
 

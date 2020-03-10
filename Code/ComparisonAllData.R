@@ -470,11 +470,23 @@ fb.ctable$`ProportionEndangered-Total` <- fb.ctable$NoEndangeredSp / fb.ctable$T
 
 half.assessed <- subset(fb.ctable, fb.ctable$ProportionAssessed >= 50)
 
+notzero.endangered <- subset(half.assessed, half.assessed$NoEndangeredSp != 0)
+more.10.species <- subset(notzero.endangered, notzero.endangered$TotalSpp >= 10)
 
+sum(more.10.species$TotalSpp)
+sum(fb.ctable$TotalSpp)
 
 save(fb.ctable, file = "../Data/RedListFishBaseFamilyAnalysis.Rdata")
 load("../ojs19/Documents/ResearchProject/Data/TABLE_WORKINPROGRESS.Rdata")
 
+load("../Data/RedListFishBaseFamilyAnalysis.Rdata")
+setwd("Documents/ResearchProject/Code/")
+
+ninety.assessed <- subset(more.10.species, more.10.species$ProportionAssessed >= 90)
+sum(ninety.assessed$TotalSpp)
+family.vector <- ninety.assessed$Family
+length(family.vector)
+family.vector
 #####
 
 

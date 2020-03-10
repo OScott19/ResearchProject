@@ -1,13 +1,13 @@
 #To install all the required R packages:
 
-install.packages("ape",repos="https://cloud.r-project.org",quiet=TRUE) #installed
-install.packages("caper",repos="https://cloud.r-project.org",quiet=TRUE) #installed
+#install.packages("ape",repos="https://cloud.r-project.org",quiet=TRUE) #installed
+#install.packages("caper",repos="https://cloud.r-project.org",quiet=TRUE) #installed
 install.packages("diversitree",repos="https://cloud.r-project.org",quiet=TRUE) 
-install.packages("geiger",repos="https://cloud.r-project.org",quiet=TRUE) #installed
-install.packages("nlme",repos="https://cloud.r-project.org",quiet=TRUE) #installed
-install.packages("OUwie",repos="https://cloud.r-project.org",quiet=TRUE)  
-install.packages("phangorn",repos="https://cloud.r-project.org",quiet=TRUE) #installed
-install.packages("phytools",repos="https://cloud.r-project.org",quiet=TRUE)  
+#install.packages("geiger",repos="https://cloud.r-project.org",quiet=TRUE) #installed
+#install.packages("nlme",repos="https://cloud.r-project.org",quiet=TRUE) #installed
+#install.packages("OUwie",repos="https://cloud.r-project.org",quiet=TRUE)  
+#install.packages("phangorn",repos="https://cloud.r-project.org",quiet=TRUE) #installed
+#install.packages("phytools",repos="https://cloud.r-project.org",quiet=TRUE)  
 
 library(ape)
 library(caper)
