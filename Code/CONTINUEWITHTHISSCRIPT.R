@@ -87,7 +87,7 @@ library(pez)
 
 
 tree_all <- read.tree("../Data/actinopt_full.trees")
-one_tree <- tree_all[1]
+one_tree <- tree_all[[1]]
 or_this <- tree_all[[1]]
 
 # use MRCA to find the most recent common ancestors of the Acipenseridae family
@@ -125,3 +125,21 @@ Acipen.tree <- drop.tip(or_this, or_this$tip.label[-test_all])
 # Can now do an edge list on this tree? 
 
 save(Acipen.tree, file = "../Data/AcipenTree.Rata")
+
+
+### Now, let's get the Acipen section from each of the 100 trees
+
+tree.list <- list()
+
+for (i in 1:100) {
+  tree.temp <- tree_all[[i]]
+  tree.temp.2 <-  phylo4d(x = tree.temp)
+  locations <- getNode(tree.temp.2, data.a$ScientificName, type = "all")
+  cut.temp <-  drop.tip(tree.temp, tree.temp$tip.label[-locations]) 
+  tree.list[[i]] <- cut.temp
+  
+}
+
+
+save(tree.list, file = "../Data/100AcipenTrees.Rdata")
+
