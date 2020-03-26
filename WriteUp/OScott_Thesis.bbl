@@ -1,0 +1,1094 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Barnosky2011}{article}{}
+      \name{author}{12}{}{%
+        {{uniquename=0,uniquepart=base,hash=3210a30298cda34a8d0fd3d070cf81ec}{%
+           family={Barnosky},
+           familyi={B\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b3ee539e285dc0389395133f45269620}{%
+           family={Matzke},
+           familyi={M\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4bbcd74fb126a8776324f593e55306ac}{%
+           family={Tomiya},
+           familyi={T\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e616440ea56b8def4aade78fe7f8236}{%
+           family={Wogan},
+           familyi={W\bibinitperiod},
+           given={Guinevere\bibnamedelima O.U.},
+           giveni={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3809dcbffc6f5bab063465e34cce3f0b}{%
+           family={Swartz},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6e3c23bc90ae224fb091027448cbb744}{%
+           family={Quental},
+           familyi={Q\bibinitperiod},
+           given={Tiago\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5e5fbe53a906a3757dbb0a4337082509}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=578c7041a4af29b5151c86f51a365000}{%
+           family={McGuire},
+           familyi={M\bibinitperiod},
+           given={Jenny\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0a6bd0565e21a1b119271303544a80e3}{%
+           family={Lindsey},
+           familyi={L\bibinitperiod},
+           given={Emily\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=70246e4df08b0928cd7aa556cdbbe5ca}{%
+           family={Maguire},
+           familyi={M\bibinitperiod},
+           given={Kaitlin\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d31b21c08e734dcc7f698f9b48f43bf}{%
+           family={Mersey},
+           familyi={M\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=91d9c9ecd6ceb241a40eaf52921676c6}{%
+           family={Ferrer},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{fullhash}{98c4130410036367090023571dfe3bde}
+      \strng{bibnamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authorbibnamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authornamehash}{c2bbb3140719498496adce713ce2df09}
+      \strng{authorfullhash}{98c4130410036367090023571dfe3bde}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Palaeontologists characterize mass extinctions as times when the Earth loses more than three-quarters of its species in a geologically short interval, as has happened only five times in the past 540million years or so. Biologists now suggest that a sixth mass extinction may be under way, given the known species losses over the past few centuries and millennia. Here we review how differences between fossil and modern data and the addition of recently available palaeontological information influence our understanding of the current extinction crisis. Our results confirm that current extinction rates are higher than would be expected from the fossil record, highlighting the need for effective conservation measures. {{$\copyright$}} 2011 Macmillan Publishers Limited. All rights reserved.}
+      \field{issn}{00280836}
+      \field{journaltitle}{Nature}
+      \field{number}{7336}
+      \field{title}{{Has the Earth's sixth mass extinction already arrived?}}
+      \field{volume}{471}
+      \field{year}{2011}
+      \field{pages}{51\bibrangedash 57}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nature09678
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Barnosky et al. - 2011 - Has the Earth's sixth mass extinction already arrived.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Barrowclough2016}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=43e2c33a31df2a3c92564732810ab977}{%
+           family={Barrowclough},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima F.},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8280ca892f3f66c4a04f642ab0665788}{%
+           family={Cracraft},
+           familyi={C\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0889c738f6c7a373f87377d91c2038e1}{%
+           family={Klicka},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=45ecce0a7a7047016cd4b081cbc54b74}{%
+           family={Zink},
+           familyi={Z\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46abf13fe29bfcbd01ead91b7ed878fd}
+      \strng{fullhash}{a64bb1cf1e8b4e7fc705f56a2a9b7615}
+      \strng{bibnamehash}{46abf13fe29bfcbd01ead91b7ed878fd}
+      \strng{authorbibnamehash}{46abf13fe29bfcbd01ead91b7ed878fd}
+      \strng{authornamehash}{46abf13fe29bfcbd01ead91b7ed878fd}
+      \strng{authorfullhash}{a64bb1cf1e8b4e7fc705f56a2a9b7615}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Estimates of global species diversity have varied widely, primarily based on variation in the numbers derived from different inventory methods of arthropods and other small invertebrates. Within vertebrates, current diversity metrics for fishes, amphibians, and reptiles are known to be poor estimators, whereas those for birds and mammals are often assumed to be relatively well established. We show that avian evolutionary diversity is significantly underestimated due to a taxonomic tradition not found in most other taxonomic groups. Using a sample of 200 species taken from a list of 9159 biological species determined primarily by morphological criteria, we applied a diagnostic, evolutionary species concept to a morphological and distributional data set that resulted in an estimate of 18,043 species of birds worldwide, with a 95{\%} confidence interval of 15,845 to 20,470. In a second, independent analysis, we examined intraspecific genetic data from 437 traditional avian species, finding an average of 2.4 evolutionary units per species, which can be considered proxies for phylogenetic species. Comparing recent lists of species to that used in this study (based primarily on morphology) revealed that taxonomic changes in the past 25 years have led to an increase of only 9{\%}, well below what our results predict. Therefore, our molecular and morphological results suggest that the current taxonomy of birds understimates avian species diversity by at least a factor of two. We suggest that a revised taxonomy that better captures avian species diversity will enhance the quantification and analysis of global patterns of diversity and distribution, as well as provide a more appropriate framework for understanding the evolutionary history of birds.}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{11}
+      \field{title}{{How many kinds of birds are there and why does it matter?}}
+      \field{volume}{11}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0166307
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/bird-diversity.pdf:pdf
+      \endverb
+      \keyw{introduction}
+    \endentry
+    \entry{Belton2018}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=ec084bde80aebd55cfcf044d6afe080a}{%
+           family={Belton},
+           familyi={B\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b214831d963429491ccd295b79d22a14}{%
+           family={Bush},
+           familyi={B\bibinitperiod},
+           given={Simon\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e5c45df2dd5911c2e5b52fb95c2eaabf}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{a2924f9eedceda5fee57242beaf4067c}
+      \strng{fullhash}{a2924f9eedceda5fee57242beaf4067c}
+      \strng{bibnamehash}{a2924f9eedceda5fee57242beaf4067c}
+      \strng{authorbibnamehash}{a2924f9eedceda5fee57242beaf4067c}
+      \strng{authornamehash}{a2924f9eedceda5fee57242beaf4067c}
+      \strng{authorfullhash}{a2924f9eedceda5fee57242beaf4067c}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Aquaculture's contributions to food security in the Global South are widely misunderstood. Dominant narratives suggest that aquaculture contributes mainly to international trade benefiting richer Northern consumers, or provides for wealthy urban consumers in Southern markets. On the supply side, the literature promotes an idealized vision of \textquoteleft{}small-scale' low input, semi-subsistence farming as the primary means by which aquaculture can contribute to food security, or emphasizes the role of \textquoteleft{}industrial' export oriented aquaculture in undermining local food security. In fact, farmed fish is produced predominantly by a \textquoteleft{}missing middle' segment of commercial and increasingly intensive farms, and overwhelmingly remains in Southern domestic markets for consumption by poor and middle income consumers in both urban and rural areas, making an important but underappreciated contribution to global food security.}
+      \field{issn}{22119124}
+      \field{journaltitle}{Global Food Security}
+      \field{number}{October 2017}
+      \field{title}{{Not just for the wealthy: Rethinking farmed fish consumption in the Global South}}
+      \field{volume}{16}
+      \field{year}{2018}
+      \field{pages}{85\bibrangedash 92}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.gfs.2017.10.005
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/1-s2.0-S221191241630089X-main.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.gfs.2017.10.005
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.gfs.2017.10.005
+      \endverb
+      \keyw{Aquaculture,Diet transformation,Domestic consumption,Fish,Food security}
+    \endentry
+    \entry{Brooks2006}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=0,uniquepart=base,hash=e2548cf70e8d191ce578a221065c4829}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={T.\bibnamedelimi M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=755c7824699a0ef5cd23ce562d9550ea}{%
+           family={Mittermeier},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=792599340e0fbfccc30c42df1b4fa443}{%
+           family={{Da Fonseca}},
+           familyi={D\bibinitperiod},
+           given={G.\bibnamedelimi A.B.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a06b46e900fa1858a10a2e3bda6d1b1f}{%
+           family={Gerlach},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2e015723f2a65c9e6f39d06af319db6a}{%
+           family={Hoffmann},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=16e1bb00a9be5883304b76fe3af56cb0}{%
+           family={Lamoreux},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3adf27c932d19020951c9dc10039ac69}{%
+           family={Mittermeier},
+           familyi={M\bibinitperiod},
+           given={C.\bibnamedelimi G.},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=753b213690357405c0840dd3548f9c61}{%
+           family={Pilgrim},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=330ff4cf24dea4b8b156c9022d019263}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi S.L.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a9f468b62d59636a316d93d4f3f6f2a}
+      \strng{fullhash}{4ced42f6ccbe6d633ba70421d0beeee3}
+      \strng{bibnamehash}{5a9f468b62d59636a316d93d4f3f6f2a}
+      \strng{authorbibnamehash}{5a9f468b62d59636a316d93d4f3f6f2a}
+      \strng{authornamehash}{5a9f468b62d59636a316d93d4f3f6f2a}
+      \strng{authorfullhash}{4ced42f6ccbe6d633ba70421d0beeee3}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The location of and threats to biodiversity are distributed unevenly, so prioritization is essential to minimize biodiversity loss. To address this need, biodiversity conservation organizations have proposed nine templates of global priorities over the past decade. Here, we review the concepts, methods, results, impacts, and challenges of these prioritizations of conservation practice within the theoretical irreplaceability/vulnerability framework of systematic conservation planning. Most of the templates prioritize highly irreplaceable regions; some are reactive (prioritizing high vulnerability), and others are proactive (prioritizing low vulnerability). We hope this synthesis improves understanding of these prioritization approaches and that it results in more efficient allocation of geographically flexible conservation funding.}
+      \field{issn}{00368075}
+      \field{journaltitle}{Science}
+      \field{number}{5783}
+      \field{title}{{Global biodiversity conservation priorities}}
+      \field{volume}{313}
+      \field{year}{2006}
+      \field{pages}{58\bibrangedash 61}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1127609
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/58.full.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Darwall2011}{article}{}
+      \name{author}{19}{}{%
+        {{uniquename=0,uniquepart=base,hash=a78eb595991c572196704050c86bd664}{%
+           family={Darwall},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima R.T.},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=56b7a76e3ef547f304efd3c7fe737499}{%
+           family={Holland},
+           familyi={H\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0dfcd0bf8aa65b70aebc8c9f3c33c2f6}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kevin\bibnamedelima G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b44ff66e8575bdd84a41facb081c6d51}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=eb6d556cbed4dd36088345c312afcf6e}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Emma\bibnamedelima G.E.},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=800173f8b0bb59e381e097e6010cf2f4}{%
+           family={Katarya},
+           familyi={K\bibinitperiod},
+           given={Vineet},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8bc7973b5d356c2daefcc06818138316}{%
+           family={Pollock},
+           familyi={P\bibinitperiod},
+           given={Caroline\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3f47826ab178e0e695c7fde71d40d79c}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Yichuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bca93397beccf4c91850e7fd09d51c3c}{%
+           family={Clausnitzer},
+           familyi={C\bibinitperiod},
+           given={Viola},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c3daee21449205742ff28d119416d91a}{%
+           family={Cumberlidge},
+           familyi={C\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ec0f46ff7aa99216ce617cfcee322df5}{%
+           family={Cuttelod},
+           familyi={C\bibinitperiod},
+           given={Annabelle},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9cfc582911d2d24994b9b7f46af897e1}{%
+           family={Dijkstra},
+           familyi={D\bibinitperiod},
+           given={Klaas\bibnamedelimb Douwe\bibnamedelima B.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=81418e30d427523ad527895f9098b16b}{%
+           family={Diop},
+           familyi={D\bibinitperiod},
+           given={Mame\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d06e8e1ada77aa968a1d668f45f03e1}{%
+           family={Garc{\'{\i}}a},
+           familyi={G\bibinitperiod},
+           given={Nieves},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=be06ccb481b7bd105a8472c37e331ae4}{%
+           family={Seddon},
+           familyi={S\bibinitperiod},
+           given={Mary\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4e96077d0d6b8a9d045a77c605a53832}{%
+           family={Skelton},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3cc1757e47ebf0ae6fb97d60603de0bb}{%
+           family={Snoeks},
+           familyi={S\bibinitperiod},
+           given={Jos},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f5acaf4e37b4618365a74027c38250a5}{%
+           family={Tweddle},
+           familyi={T\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=435f66f4bd1953d4d3426569ae1ed303}{%
+           family={Vi{\'{e}}},
+           familyi={V\bibinitperiod},
+           given={Jean\bibnamedelima Christophe},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5192dadf43e0cb1c15929e019d922bc4}
+      \strng{fullhash}{cc7d56b5b9cfaa57bcf24ea9d49a176f}
+      \strng{bibnamehash}{5192dadf43e0cb1c15929e019d922bc4}
+      \strng{authorbibnamehash}{5192dadf43e0cb1c15929e019d922bc4}
+      \strng{authornamehash}{5192dadf43e0cb1c15929e019d922bc4}
+      \strng{authorfullhash}{cc7d56b5b9cfaa57bcf24ea9d49a176f}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Human population growth and economic development threaten the integrity of freshwater ecosystems globally, reducing their ability to support biodiversity and provide ecosystem services. However, our knowledge of freshwater biodiversity is fragmented due to bias in conservation research toward primarily terrestrial or charismatic taxonomic groups. Here, we utilize the most comprehensive assessment of freshwater biodiversity for an entire continent to examine the implications of this shortfall. Results indicate that groups that have been the focus of most conservation research are poor surrogates for patterns of both richness and threat for many freshwater groups, and that the existing protected area network underrepresents freshwater species. Areas of highest species richness and threat are congruent with areas where reliance on ecosystem services by humans and pressures placed on freshwater ecosystems are high. These results have implications for targets to reduce biodiversity loss and safeguard associated ecosystem services on which millions of people depend globally. {{$\copyright$}}2011 Wiley Periodicals, Inc.}
+      \field{issn}{1755263X}
+      \field{journaltitle}{Conservation Letters}
+      \field{number}{6}
+      \field{title}{{Implications of bias in conservation research and investment for freshwater species}}
+      \field{volume}{4}
+      \field{year}{2011}
+      \field{pages}{474\bibrangedash 482}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1111/j.1755-263X.2011.00202.x
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/j.1755-263X.2011.00202.x.pdf:pdf
+      \endverb
+      \keyw{Africa,Biodiversity,Freshwater,Key biodiversity areas,Livelihoods,Poverty,Protected areas,Red list,Surrogates,Threatened}
+    \endentry
+    \entry{FAO2020}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=48e341f8583b37b317be3460b670f045}{%
+           family={Department},
+           familyi={D\bibinitperiod},
+           given={Fisheries},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9ed35295bcaecd38cea2f296e857f404}{%
+           family={Aquaculturer},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{38768081e79bdc6f614948a02dae2413}
+      \strng{fullhash}{38768081e79bdc6f614948a02dae2413}
+      \strng{bibnamehash}{38768081e79bdc6f614948a02dae2413}
+      \strng{authorbibnamehash}{38768081e79bdc6f614948a02dae2413}
+      \strng{authornamehash}{38768081e79bdc6f614948a02dae2413}
+      \strng{authorfullhash}{38768081e79bdc6f614948a02dae2413}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FAO Fisheries and Aquaculture Department [online]}
+      \field{title}{{Fisheries and Aquaculture Department}}
+      \field{urlday}{23}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.fao.org/fishery/
+      \endverb
+      \verb{url}
+      \verb http://www.fao.org/fishery/
+      \endverb
+      \keyw{introduction}
+    \endentry
+    \entry{Fishbase}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3e2d371e34e51bcbc629e9a37ef9f2c6}{%
+           family={Froese},
+           familyi={F\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8cc166fcd7766255b9b88dc2377f43b3}{%
+           family={Pauly},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \strng{fullhash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \strng{bibnamehash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \strng{authorbibnamehash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \strng{authornamehash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \strng{authorfullhash}{01ea51f6f947ea3c81349c1ec03932ae}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Editors. 2019. FishBase.}
+      \field{booktitle}{World Wide Web electronic publication.}
+      \field{title}{{FishBase}}
+      \verb{urlraw}
+      \verb www.fishbase.org, version (12/2019).
+      \endverb
+      \verb{url}
+      \verb www.fishbase.org,%20version%20(12/2019).
+      \endverb
+    \endentry
+    \entry{Isaac2007}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=9e44ee7c918186f5b85df9f03fb3dbfe}{%
+           family={Isaac},
+           familyi={I\bibinitperiod},
+           given={Nick\bibnamedelima J.B.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b5bae7e5fc2af23478ca25729a7a2132}{%
+           family={Turvey},
+           familyi={T\bibinitperiod},
+           given={Samuel\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bafce2024fe121620a15913e7828045e}{%
+           family={Collen},
+           familyi={C\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=14dc3742ede67771e6fa289c6a80c800}{%
+           family={Waterman},
+           familyi={W\bibinitperiod},
+           given={Carly},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38ae0783b2d890ce9295ee22cdf349b7}{%
+           family={Baillie},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima E.M.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{fullhash}{5e7405df15b86159e5b65895b5a2dd45}
+      \strng{bibnamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authorbibnamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authornamehash}{cb9e6e701d09e27849cca26f28c9a672}
+      \strng{authorfullhash}{5e7405df15b86159e5b65895b5a2dd45}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Conservation priority setting based on phylogenetic diversity has frequently been proposed but rarely implemented. Here, we define a simple index that measures the contribution made by different species to phylogenetic diversity and show how the index might contribute towards species-based conservation priorities. We describe procedures to control for missing species, incomplete phylogenetic resolution and uncertainty in node ages that make it possible to apply the method in poorly known clades. We also show that the index is independent of clade size in phylogenies of more than 100 species, indicating that scores from unrelated taxonomic groups are likely to be comparable. Similar scores are returned under two different species concepts, suggesting that the index is robust to taxonomic changes. The approach is applied to a near-complete species-level phylogeny of the Mammalia to generate a global priority list incorporating both phylogenetic diversity and extinction risk. The 100 highest-ranking species represent a high proportion of total mammalian diversity and include many species not usually recognised as conservation priorities. Many species that are both evolutionarily distinct and globally endangered (EDGE species) do not benefit from existing conservation projects or protected areas. The results suggest that global conservation priorities may have to be reassessed in order to prevent a disproportionately large amount of mammalian evolutionary history becoming extinct in the near future. {{$\copyright$}} 2007 Isaac et al.}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{3}
+      \field{title}{{Mammals on the EDGE: Conservation priorities based on threat and phylogeny}}
+      \field{volume}{2}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0000296
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Isaac et al. - 2007 - Mammals on the EDGE Conservation priorities based on threat and phylogeny.pdf:pdf
+      \endverb
+    \endentry
+    \entry{IUCN2000}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8b68168328142541db7be10303b951d0}{%
+           family={IUCN},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b68168328142541db7be10303b951d0}
+      \strng{fullhash}{8b68168328142541db7be10303b951d0}
+      \strng{bibnamehash}{8b68168328142541db7be10303b951d0}
+      \strng{authorbibnamehash}{8b68168328142541db7be10303b951d0}
+      \strng{authornamehash}{8b68168328142541db7be10303b951d0}
+      \strng{authorfullhash}{8b68168328142541db7be10303b951d0}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IUCN}
+      \field{isbn}{9782831714356}
+      \field{issn}{0022-3573}
+      \field{title}{{IUCN RED LIST CATEGORIES AND CRITERIA}}
+      \field{type}{techreport}
+      \field{volume}{27 Suppl?-}
+      \field{year}{1975}
+      \field{pages}{59P}
+      \range{pages}{-1}
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/RL-2001-001-2nd.pdf:pdf
+      \endverb
+      \keyw{introduction}
+    \endentry
+    \entry{Mammal2020}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0eb5b864b2bac87ab923fcea2a9fa0d3}{%
+           family={Mammalogists},
+           familyi={M\bibinitperiod},
+           given={American\bibnamedelima Society},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0,
+           prefix={of},
+           prefixi={o\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \strng{fullhash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \strng{bibnamehash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \strng{authorbibnamehash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \strng{authornamehash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \strng{authorfullhash}{0eb5b864b2bac87ab923fcea2a9fa0d3}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Mammal Diversity Database}}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb www.mammaldiversity.org.
+      \endverb
+      \verb{url}
+      \verb www.mammaldiversity.org.
+      \endverb
+      \keyw{introduction}
+    \endentry
+    \entry{Marinesque2012}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=d0b50c80653f3fd61d303f4e4c00cbb3}{%
+           family={Marinesque},
+           familyi={M\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d05baf3b2b8022b9359896685a99a790}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b258e53076c78908283c538cddb32e10}{%
+           family={Rodwell},
+           familyi={R\bibinitperiod},
+           given={Lynda\bibnamedelima D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{36444a021e0f9f851b282126b6c20d45}
+      \strng{fullhash}{36444a021e0f9f851b282126b6c20d45}
+      \strng{bibnamehash}{36444a021e0f9f851b282126b6c20d45}
+      \strng{authorbibnamehash}{36444a021e0f9f851b282126b6c20d45}
+      \strng{authornamehash}{36444a021e0f9f851b282126b6c20d45}
+      \strng{authorfullhash}{36444a021e0f9f851b282126b6c20d45}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{While the global network of marine protected areas (MPAs) has recently been evaluated in the light of bio-geographic targets, there has been no attempt to evaluate the relative conservation efforts made by the different nations with regards to their level of socio-economic development. Using information mostly gathered from the world database on protected areas (WDPA), this paper gives a comparative assessment of MPA progress in countries from different economic categories, ranging from advanced economies to least developed countries (LDCs). Potentially explanatory socio-economic and environmental factors, such as fishing activity and existence of vulnerable marine ecosystems, for variability between nations in the level of MPA implementation are also explored. Existing MPA databases demonstrate a clear gap between developed and developing nations in MPA establishment, with advanced economies accounting for two thirds of the global MPA network. Patterns of MPA use, however, remain extremely heterogeneous between countries within each development group. International agreements on marine conservation, above and beyond the influence of country socio-economic and environmental profiles, are identified as a stimulating factor to MPA implementation. The level dependence on marine resource extraction appears to impede MPA implementation, though the relationship is not statistically significant due to large heterogeneity among countries. Leading developed nations increasingly use MPAs to designate integrated and adaptive management areas, and implementation of large "no-take" reserves in relatively-pristine overseas areas continues to accelerate. These analyses highlight certain limitations regarding our ability to assess the true conservation effectiveness of the existing global MPA network and the need for improved indicators of MPA restrictions and management efforts. {{$\copyright$}} 2011 Elsevier Ltd.}
+      \field{issn}{0308597X}
+      \field{journaltitle}{Marine Policy}
+      \field{number}{3}
+      \field{title}{{Global implementation of marine protected areas: Is the developing world being left behind?}}
+      \field{volume}{36}
+      \field{year}{2012}
+      \field{pages}{727\bibrangedash 737}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.marpol.2011.10.010
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/1-s2.0-S0308597X11001606-main.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.marpol.2011.10.010
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.marpol.2011.10.010
+      \endverb
+      \keyw{Conservation targets,Developing world,Gap analysis,International policy,Marine protected areas (MPAs),Meta-analysis,introduction}
+    \endentry
+    \entry{Mary2020}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=5bf26b08a24789b844353e15548484c9}{%
+           family={Mary},
+           familyi={M\bibinitperiod},
+           given={By},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=498cc412cf098229425729c4a2ab5dc0}{%
+           family={Shoup},
+           familyi={S\bibinitperiod},
+           given={Ellen},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cf5bdc46721e884dd6b23fc888764e41}
+      \strng{fullhash}{cf5bdc46721e884dd6b23fc888764e41}
+      \strng{bibnamehash}{cf5bdc46721e884dd6b23fc888764e41}
+      \strng{authorbibnamehash}{cf5bdc46721e884dd6b23fc888764e41}
+      \strng{authornamehash}{cf5bdc46721e884dd6b23fc888764e41}
+      \strng{authorfullhash}{cf5bdc46721e884dd6b23fc888764e41}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Food Nativator USA}
+      \field{month}{10}
+      \field{title}{{Cargill : Americans are eating more fish than they did five years ago , prioritizing nutrition and sustainability}}
+      \field{year}{2018}
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/USA{\_}changingfishconsumption.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.foodnavigator-usa.com/Article/2018/10/02/Cargill-Americans-are-eating-more-fish-than-they-did-five-years-ago-prioritizing-nutrition-and-sustainability
+      \endverb
+      \verb{url}
+      \verb https://www.foodnavigator-usa.com/Article/2018/10/02/Cargill-Americans-are-eating-more-fish-than-they-did-five-years-ago-prioritizing-nutrition-and-sustainability
+      \endverb
+      \keyw{Introduction}
+    \endentry
+    \entry{MurakiGottlieb2018}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=296ca16f3f6a3fffedb47ee3804293be}{%
+           family={{Muraki Gottlieb}},
+           familyi={M\bibinitperiod},
+           given={Hiroko},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4951b60bc051323324b63f82a22203f9}{%
+           family={Laffoley},
+           familyi={L\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4a20f9e9db48488b703d3c86c333b397}{%
+           family={Gjerde},
+           familyi={G\bibinitperiod},
+           given={Kristina.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b237015a44b483218abf8fe6346d0b8c}{%
+           family={Spadone},
+           familyi={S\bibinitperiod},
+           given={Aur{\'{e}}lie},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{74a65ca5998e1f71aedbfc6426a37bd8}
+      \strng{fullhash}{6a50f33bde59f9853ce832d6352743f9}
+      \strng{bibnamehash}{74a65ca5998e1f71aedbfc6426a37bd8}
+      \strng{authorbibnamehash}{74a65ca5998e1f71aedbfc6426a37bd8}
+      \strng{authornamehash}{74a65ca5998e1f71aedbfc6426a37bd8}
+      \strng{authorfullhash}{6a50f33bde59f9853ce832d6352743f9}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{October}
+      \field{title}{{Area Based Management Tools , Including Marine Protected Areas in Areas Beyond National Jurisdictionn, 9 -- 11 October 2018 at IUCN Headquarters, Gland, Switzerland. Gland, Switzerland: IUCN.}}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/iucn{\_}oct2018{\_}abmt{\_}in{\_}abnj{\_}workshop{\_}report{\_}corr.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.iucn.org/sites/dev/files/content/documents/iucn{\_}oct2018{\_}abmt{\_}in{\_}abnj{\_}workshop{\_}report{\_}corr.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.iucn.org/sites/dev/files/content/documents/iucn%7B%5C_%7Doct2018%7B%5C_%7Dabmt%7B%5C_%7Din%7B%5C_%7Dabnj%7B%5C_%7Dworkshop%7B%5C_%7Dreport%7B%5C_%7Dcorr.pdf
+      \endverb
+    \endentry
+    \entry{Pincheira-Donoso2013}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=cf2fd86a8685ccbf20e3e28ab05058da}{%
+           family={Pincheira-Donoso},
+           familyi={P\bibinithyphendelim D\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8393de6fb5d824bd92a6786b1619b390}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Aaron\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4fe75cd037afc1cdf21f719f6f9e8a0e}{%
+           family={Meiri},
+           familyi={M\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a2856e77697fe56c8848192a6381e47d}{%
+           family={Uetz},
+           familyi={U\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{873eab501176ce2efccb64483963c898}
+      \strng{fullhash}{04db7c31b8f4a70ff14852fbdc2e03d1}
+      \strng{bibnamehash}{873eab501176ce2efccb64483963c898}
+      \strng{authorbibnamehash}{873eab501176ce2efccb64483963c898}
+      \strng{authornamehash}{873eab501176ce2efccb64483963c898}
+      \strng{authorfullhash}{04db7c31b8f4a70ff14852fbdc2e03d1}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reptiles are one of the most ecologically and evolutionarily remarkable groups of living organisms, having successfully colonized most of the planet, including the oceans and some of the harshest and more environmentally unstable ecosystems on earth. Here, based on a complete dataset of all the world's diversity of living reptiles, we analyse lineage taxonomic richness both within and among clades, at different levels of the phylogenetic hierarchy. We also analyse the historical tendencies in the descriptions of new reptile species from Linnaeus to March 2012. Although (non-avian) reptiles are the second most species-rich group of amniotes after birds, most of their diversity (96.3{\%}) is concentrated in squamates (59{\%} lizards, 35{\%} snakes, and 2{\%} amphisbaenians). In strong contrast, turtles (3.4{\%}), crocodilians (0.3{\%}), and tuataras (0.01{\%}) are far less diverse. In terms of species discoveries, most turtles and crocodilians were described early, while descriptions of lizards, snakes and amphisbaenians are multimodal with respect to time. Lizard descriptions, in particular, have reached unprecedented levels during the last decade. Finally, despite such remarkably asymmetric distributions of reptile taxonomic diversity among groups, we found that the distributions of lineage richness are consistently right-skewed, with most clades (monophyletic families and genera) containing few lineages (monophyletic genera and species, respectively), while only a few have radiated greatly (notably the families Colubridae and Scincidae, and the lizard genera Anolis and Liolaemus). Therefore, such consistency in the frequency distribution of richness among clades and among phylogenetic levels suggests that the nature of reptile biodiversity is fundamentally fractal (i.e., it is scale invariant). We then compared current reptile diversity with the global reptile diversity and taxonomy known in 1980. Despite substantial differences in the taxonomies (relative to 2012), the patterns of lineage richness remain qualitatively identical, hence reinforcing our conclusions about the fractal nature of reptile biodiversity. {{$\copyright$}} 2013 Pincheira-Donoso et al.}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{3}
+      \field{title}{{Global Taxonomic Diversity of Living Reptiles}}
+      \field{volume}{8}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0059741
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/pone.0059741.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Rimm2006}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=35d6ea2b1ef45cd8e1ad76dc6e618dad}{%
+           family={Rimm},
+           familyi={R\bibinitperiod},
+           given={Eric\bibnamedelima B},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \strng{fullhash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \strng{bibnamehash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \strng{authorbibnamehash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \strng{authornamehash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \strng{authorfullhash}{35d6ea2b1ef45cd8e1ad76dc6e618dad}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{15}
+      \field{title}{{Fish Intake, Contaminants, and Human Health}}
+      \field{volume}{296}
+      \field{year}{2006}
+      \field{pages}{1885\bibrangedash 1900}
+      \range{pages}{16}
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/jcr60006.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Clark2002}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=417568b512ba20b5bb3fe3fbdf347d0b}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Raymond\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \strng{fullhash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \strng{bibnamehash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \strng{authorbibnamehash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \strng{authornamehash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \strng{authorfullhash}{417568b512ba20b5bb3fe3fbdf347d0b}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The 117th Meeting of the American Association for the Advancement of Science, the annual meeting for the year 1950, will be a full-scale meeting---with programs in every principal field of science. All 17 of the Association's sections and subsections, and more than 40 participating societies and organizations, are completing plans for an aggregate of more than 200 sessions. {{$\copyright$}} 1950 by The Endocrine Society.}
+      \field{issn}{19457197}
+      \field{journaltitle}{Science}
+      \field{number}{10}
+      \field{title}{{Taxanomic Bias in Conservation Research}}
+      \field{volume}{297}
+      \field{year}{2002}
+      \field{pages}{191\bibrangedash 192}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1210/jcem-10-10-1361
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/3077032.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/3077032
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/3077032
+      \endverb
+    \endentry
+    \entry{Tremblay2011}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=9aacc5af25c638c5b94665b07bf3a115}{%
+           family={Tremblay-Boyer},
+           familyi={T\bibinithyphendelim B\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=312501ed281760f73d8d44b8f7435cf1}{%
+           family={Gascuel},
+           familyi={G\bibinitperiod},
+           given={Didier},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=861ea5ded88ab7c22f719d5e5a1a7c8b}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Reg},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=dfb6db99aeed56a1383639e03e62739d}{%
+           family={Christensen},
+           familyi={C\bibinitperiod},
+           given={Villy},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b604044f8f3cd92966263096ffa86ced}{%
+           family={Pauly},
+           familyi={P\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{799328a533e296dc1199243ce7425b63}
+      \strng{fullhash}{04e8aaebc25738cb55cc215ae4f033b4}
+      \strng{bibnamehash}{799328a533e296dc1199243ce7425b63}
+      \strng{authorbibnamehash}{799328a533e296dc1199243ce7425b63}
+      \strng{authornamehash}{799328a533e296dc1199243ce7425b63}
+      \strng{authorfullhash}{04e8aaebc25738cb55cc215ae4f033b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Marine fisheries have endured for centuries but the last 50 yr have seen a drastic increase in their reach and intensity. We generated global estimates of biomass for marine ecosystems and evaluated the effects that fisheries have had on ocean biomass since the 1950s. A simple and versatile ecosystem model was used to represent ecosystems as a function of energy fluxes through trophic levels (TLs). Using primary production, sea surface temperature, transfer efficiency, fisheries catch and TL of species, the model was applied on a half-degree spatial grid covering all oceans. Estimates of biomass by TLs were derived for marine ecosystems in an unexploited state, as well as for all decades since the 1950s. Trends in the decline of marine biomass from the unexploited state were analyzed with a special emphasis on predator species as they are highly vulnerable to overexploitation. This study highlights 3 main trends in the global effects of fishing: (1) predators are more affected than organisms at lower TLs; (2) declines in ecosystem biomass are stronger along coastlines than in the High Seas; and (3) the extent of fishing and its impacts have expanded from north temperate to equatorial and southern waters in the last 50 yr. More specifically, this modelling work shows that many oceans historically exploited by humans have seen a drastic decline in their predator biomass, with approximately half of the coastal areas of the North Atlantic and North Pacific showing a decline in predator biomass of more than 90{\%}. {{$\copyright$}} Inter-Research 2011.}
+      \field{issn}{01718630}
+      \field{journaltitle}{Marine Ecology Progress Series}
+      \field{title}{{Modelling the effects of fishing on the biomass of the world's oceans from 1950 to 2006}}
+      \field{volume}{442}
+      \field{year}{2011}
+      \field{pages}{169\bibrangedash 185}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.3354/meps09375
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/m442p169.pdf:pdf
+      \endverb
+      \keyw{Ecosystem modelling,Energy flow,Fisheries,Marine predators,Trophic level}
+    \endentry
+    \entry{Watson2017}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=d445d635bf36de9257d9425e7ff135cc}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima E.M.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9f9bc0f522bbddc6f88ed2f64c93dbcf}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8ce89d287be359a463fc0bc8a203fbce}{%
+           family={Althor},
+           familyi={A\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=52fa17466b8a53658b5192ca1b09f177}{%
+           family={Kearney},
+           familyi={K\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d445d635bf36de9257d9425e7ff135cc}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima E.M.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B. V.}%
+      }
+      \strng{namehash}{9b19d7f3c11776b7ea8219e81d533258}
+      \strng{fullhash}{42f729f00ce9b5e8fb58cdeb16fa5b0e}
+      \strng{bibnamehash}{9b19d7f3c11776b7ea8219e81d533258}
+      \strng{authorbibnamehash}{9b19d7f3c11776b7ea8219e81d533258}
+      \strng{authornamehash}{9b19d7f3c11776b7ea8219e81d533258}
+      \strng{authorfullhash}{42f729f00ce9b5e8fb58cdeb16fa5b0e}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Conservation science is a rapidly developing discipline, and the knowledge base it generates is relevant for practical applications. It is therefore crucial to monitor biases and trends in conservation literature, to track the progress of the discipline and re-align efforts where needed. We evaluated past and present trends in the focus of the conservation literature, and how they relate to conservation needs. We defined the focus of the past literature from 13 published reviews referring to 18,369 article classifications, and the focus of the current literature by analysing 2553 articles published between 2011--2015. We found that some of the historically under-studied biodiversity elements are receiving significantly more attention today, despite being still under-represented. The total proportion of articles on invertebrates, genetic diversity, or aquatic systems is 50{\%}--60{\%} higher today than it was before 2010. However, a disconnect between scientific focus and conservation needs is still present, with greater attention devoted to areas or taxa less rich in biodiversity and threatened biodiversity. In particular, a strong geographical bias persists, with 40{\%} of studies carried out in USA, Australia or the UK, and only 10{\%} and 6{\%} respectively in Africa or South East Asia. Despite some changing trends, global conservation science is still poorly aligned with biodiversity distribution and conservation priorities, especially in relation to threatened species. To overcome the biases identified here, scientists, funding agencies and journals must prioritise research adaptively, based on biodiversity conservation needs. Conservation depends on policy makers and practitioners for success, and scientists should actively provide those who make decisions with the knowledge that best addresses their needs.}
+      \field{issn}{23519894}
+      \field{journaltitle}{Global Ecology and Conservation}
+      \field{title}{{Changing trends and persisting biases in three decades of conservation science}}
+      \field{volume}{10}
+      \field{year}{2017}
+      \field{pages}{32\bibrangedash 42}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.gecco.2017.01.008
+      \endverb
+      \verb{file}
+      \verb :home/ojs19/Documents/ResearchProject/Readings/1-s2.0-S2351989417300148-main.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.gecco.2017.01.008
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.gecco.2017.01.008
+      \endverb
+      \keyw{Conservation bias,Convention on biological diversity,Freshwater,Genetic diversity,Invertebrates,Literature trends}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
