@@ -1,18 +1,18 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'OScott_Thesis.blg'
-[24] biber:313> INFO - === Wed Mar 25, 2020, 17:23:25
-[44] Biber.pm:371> INFO - Reading 'OScott_Thesis.bcf'
-[101] Biber.pm:857> INFO - Found 18 citekeys in bib section 0
-[113] Biber.pm:3981> INFO - Processing section 0
-[124] Biber.pm:4154> INFO - Looking for bibtex format file 'thesisRef.bib' for section 0
-[133] bibtex.pm:1468> INFO - LaTeX decoding ...
-[214] bibtex.pm:1294> INFO - Found BibTeX data source 'thesisRef.bib'
-[348] Utils.pm:169> WARN - month field 'oct' in entry 'Mary2020' is not an integer - this will probably not sort properly.
-[412] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[413] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[413] Biber.pm:3809> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[413] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[438] bbl.pm:617> INFO - Writing 'OScott_Thesis.bbl' with encoding 'ascii'
-[438] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
-[492] bbl.pm:720> INFO - Output to OScott_Thesis.bbl
-[492] Biber.pm:110> INFO - WARNINGS: 1
+[48] biber:313> INFO - === Thu Mar 26, 2020, 10:19:32
+[67] Biber.pm:371> INFO - Reading 'OScott_Thesis.bcf'
+[120] Biber.pm:857> INFO - Found 18 citekeys in bib section 0
+[131] Biber.pm:3981> INFO - Processing section 0
+[146] Biber.pm:4154> INFO - Looking for bibtex format file 'thesisRef.bib' for section 0
+[154] bibtex.pm:1468> INFO - LaTeX decoding ...
+[226] bibtex.pm:1294> INFO - Found BibTeX data source 'thesisRef.bib'
+[349] Utils.pm:169> WARN - month field 'oct' in entry 'Mary2020' is not an integer - this will probably not sort properly.
+[408] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[408] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[408] Biber.pm:3809> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[408] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[434] bbl.pm:617> INFO - Writing 'OScott_Thesis.bbl' with encoding 'ascii'
+[435] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
+[482] bbl.pm:720> INFO - Output to OScott_Thesis.bbl
+[482] Biber.pm:110> INFO - WARNINGS: 1
