@@ -13,15 +13,24 @@ library(geiger) #installed
 library(pez)  #installed
 
 
-
-
 # set working directory - enter your desired folder location e.g. "c:/users/rikki/Desktop")
-setwd("~/Documents/CMEECourseWork/ResearchProject/Code")
+setwd("~/Documents/ResearchProject/Code")
 
 # read in phylogeny - this function works if the tree file is .nwk, .tre/.tres/.trees, .txt
 # if extension is .nex then use "read.nexus()" function
 
-tree <- load(file = "AcipenTree.Rata")
+load(file = "../Data/AcipenTree.Rata")
+
+tree.phylo4 <- as(Acipen.tree, "phylo4")
+dev.print(png, "AcipenTreePlot.png")
+
+
+save(tree.phylo4, file="../Data/AcipenTreePlot.pdf")
+
+savePlot(filename = paste0("TestTree", "png"), type = "png")
+
+acipen.plot <- treePlot(tree.phylo4)
+
 
 tree <- Acipen.tree
 
@@ -127,6 +136,7 @@ for (x in 1:25) {
   }
 }
 
+
 #### THERE ARE THREE DIFFERENCES! 
 
 
@@ -137,11 +147,11 @@ library(rfishbase)
 
 sturgeon.fam <- rfishbase::species_list(Family = "Acipenseridae") # there are 25 names on this list
 
-# put in same format as the fish tree ones
+# put in same format as the fish tree ones 
 
 Fishbase <-  as.character(gsub(" ", "_",sturgeon.fam))
 
-sturgeon.names <- c()
+sturgeon.names <- c()   
 sturgeon.names$FishBase <- Fishbase
 sturgeon.names$FishTree <- species.GE$Species
 
@@ -159,3 +169,110 @@ for (i in 1:length(sturgeon.names$FishBase)) {
 
 # so, there are 25 species of sturgeon
 
+
+##################################### CALCULATING EDGE2 METRIC
+
+# tree is a single phylo object and pext must be a dataframe with columns: 
+# Species - the names of all species in the tree
+# pext - the probability of extinction of each species - see Mooers et al. 2008 for standard pext values
+rm(list=ls())
+graphics.off()
+
+# TREE is going to be the acipen tree 
+
+tree <- load(file = "AcipenTree.Rata")
+
+tree <- Acipen.tree
+
+###  species will be the list of the species in the tree 
+
+load(file = "../Data/AcipenseridaeForEDGE.Rdata")
+species.GE <- data.a
+colnames(species.GE) <- c("Species", "Status", "GE")
+species.GE$Species <-  gsub(" ", "_", species.GE$Species)
+species.GE$Pext <- NA
+
+pextISAAC <- c(0.025, 0.05, 0.1, 0.2, 0.4)
+pext100 <- c(0.0001, 0.01, 0.1, 0.667, 0.999)
+pext50 <- c(0.00005, 0.004, 0.05, 0.42, 0.97)
+pext500 <- c(0.0005, 0.02, 0.39, 0.996, 1)
+pextPess <- c(0.2, 0.4, 0.8, 0.9, 0.99)
+
+### starting with Isaac
+
+# fuction: start with a dataframe with species & their red list assessment in 
+
+
+calculate.pext <- function(ext.risk, data) {
+  data <- isaac.data
+  data[,3] <- NA
+  colnames(data) <- c("Species", "Status", "pext")
+  for (i in 1:length(data$Species)) {
+    if (data[i,2] == "Least Concern") {
+      data$pext[i] <- ext.risk[1]
+    }
+    if (data[i, 2] == "Near Threatened") {
+      data$pext[i] <- ext.risk[2]
+    }
+    if (data[i,2] == "Vulnerable") {
+      data$pext[i] <- ext.risk[3]
+    }
+    if (data[i,2] == "Endangered") {
+      data$pext[i] <- ext.risk[4]
+    }
+    if (data[i,2] == "Critically Endangered") {
+      data$pext[i] <- ext.risk[5]
+  }
+  } 
+  return(data)
+  }
+
+### calculating pext for ISAAC
+isaac.data <- data.frame(matrix(ncol = 1, nrow = 25))
+isaac.data$Species <- species.GE$Species
+isaac.data$Status <- species.GE$Status
+isaac.data <- isaac.data[,-1]
+
+isaac.data <- calculate.pext(pextISAAC, isaac.data)
+
+
+
+##### pextnct 
+
+ePD.loss.calc <- function(tree, pext){
+  require(phylobase)
+  require(data.table)
+  # converts tree to phylo4 object
+  if(!class(tree) == "phylo4"){
+    tree <- as(tree, "phylo4")
+  }
+  # create df for data
+  tree_dat <- data.frame(Species = as.character(unique(tipLabels(tree))), IWE = NA, TBL = NA, ED = NA, EDGE = NA)
+  # calculate IWE and TBL for each species
+  for(ii in 1:length(tipLabels(tree))){
+    nodes <- ancestors(tree, ii, type = "ALL")
+    root <- rootNode(tree)
+    nodes <- nodes[-which(nodes == root)]
+    a <- 0
+    for(i in nodes){
+      if(i == ii){
+        tree_dat$TBL[ii] <- edgeLength(tree)[getEdge(tree, ii)]
+      }else{
+        tips <- descendants(tree, nodes[nodes == i], "tips")
+        tips <- tips[-which(tips == ii)]
+        # calculate total pext to transform branch
+        a <- c(a,as.numeric(edgeLength(tree)[getEdge(tree, i)] * prod(pext$pext[pext$Species %in% tipLabels(tree)[tips]])))
+      }
+    }
+    tree_dat$IWE[ii] <- sum(a)
+    tree_dat$ED[ii] <- tree_dat$IWE[ii] + tree_dat$TBL[ii]
+    tree_dat$EDGE[ii] <- tree_dat$ED[ii]*pext$pext[pext$Species == tree_dat$Species[ii]]
+    head(tree_dat)
+    #print(ii)
+  }
+  return(tree_dat)
+}
+
+hedge_isaac <- ePD.loss.calc(Acipen.tree, isaac.data)
+
+#### now lets compare HEDGE & EDGE
