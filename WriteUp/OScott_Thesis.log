@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.2)  26 MAR 2020 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.2)  15 APR 2020 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,7 +465,7 @@ Package biblatex Info: ... file 'OScott_Thesis.bbl' found.
 (./OScott_Thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
- (../Code/thesisWordcount.sum) [1
+ (./thesisWordcount.sum) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 <Images/RedListCategories.png, id=13, 661.47125pt x 450.68375pt>
@@ -498,12 +498,20 @@ I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
+
+LaTeX Warning: Reference `IUCNcategories' on page 2 undefined on input line 149
+.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 157.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 157.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 157.
+
+LaTeX Warning: Reference `ClassAssessment' on page 2 undefined on input line 16
+9.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 157--170
 
@@ -523,6 +531,10 @@ You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
+LaTeX Warning: Reference `ClassAssessment' on page 3 undefined on input line 18
+0.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 171--188
 
  []
@@ -531,14 +543,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--188
 Underfull \hbox (badness 10000) in paragraph at lines 171--188
 
  []
+
+
+LaTeX Warning: Reference `ClassAssessment' on page 3 undefined on input line 19
+3.
 
 [3]
-<Images/GobalCatch.pdf, id=24, 558.085pt x 526.96875pt>
+
+LaTeX Warning: Reference `GlobalCatch' on page 4 undefined on input line 204.
+
+<Images/GobalCatch.pdf, id=25, 558.085pt x 526.96875pt>
 File: Images/GobalCatch.pdf Graphic file (type pdf)
 <use Images/GobalCatch.pdf>
 Package pdftex.def Info: Images/GobalCatch.pdf  used on input line 208.
 (pdftex.def)             Requested size: 171.99922pt x 162.40979pt.
-
 ! Argument of \@caption has an extra }.
 <inserted text> 
                 \par 
@@ -588,6 +606,9 @@ d Hu-man Health''. In: 296.15, pp. 1885{
 
 [7] [8] (./OScott_Thesis.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
@@ -599,25 +620,26 @@ Package logreq Info: Writing requests to 'OScott_Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9039 strings out of 492982
- 158081 string characters out of 6134896
- 570514 words of memory out of 5000000
- 12515 multiletter control sequences out of 15000+600000
- 9003 words of font info for 32 fonts, out of 8000000 for 9000
+ 8993 strings out of 492982
+ 157575 string characters out of 6134896
+ 569223 words of memory out of 5000000
+ 12469 multiletter control sequences out of 15000+600000
+ 9311 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,7n,64p,2315b,1927s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt10.pfb>
-Output written on OScott_Thesis.pdf (9 pages, 203685 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb>
+Output written on OScott_Thesis.pdf (9 pages, 212622 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
