@@ -1,8 +1,9 @@
-# EDGE calculations for a single phylogeny
+# EDGE calculations for a single phylogeny - the Acipenseridae (sturgeon - 25 species)
 
+# Housekeeping
 rm(list=ls())
 graphics.off()
-
+setwd("~/Documents/ResearchProject/Code/")
 
 # packages
 library(caper) #installed
@@ -13,26 +14,20 @@ library(geiger) #installed
 library(pez)  #installed
 
 
-# set working directory - enter your desired folder location e.g. "c:/users/rikki/Desktop")
-setwd("~/Documents/ResearchProject/Code")
-
 # read in phylogeny - this function works if the tree file is .nwk, .tre/.tres/.trees, .txt
 # if extension is .nex then use "read.nexus()" function
 
-load(file = "../Data/AcipenTree.Rata")
+load(file = "../Data/AcipenTree.Rdata") # this loads a single tree
 
-tree.phylo4 <- as(Acipen.tree, "phylo4")
-dev.print(png, "AcipenTreePlot.png")
+# VISUALISE THE TREE & SAVE IT DOOWN
+tree.phylo4 <- as(Acipen.tree, "phylo4") # this converts the phylo object (tree) into a phylo4 tree, which is what the package needs
 
+acipen.plot <- treePlot(tree.phylo4) # creaes a visual of the tree
+dev.print(png, "../Data/AcipenTreePlot.png") # SAVES as png
 
-save(tree.phylo4, file="../Data/AcipenTreePlot.pdf")
+save(tree.phylo4, file="../Data/AcipenTreePlot.pdf") # saves as a pdf
 
-savePlot(filename = paste0("TestTree", "png"), type = "png")
-
-acipen.plot <- treePlot(tree.phylo4)
-
-
-tree <- Acipen.tree
+tree <- Acipen.tree # renames the tree as tree
 
 # read in csv with two columns: Species and GE 
 # Species should have the names of the species in the phylogeny (if present) 
@@ -40,7 +35,7 @@ tree <- Acipen.tree
 # GE should be the RL status converted to GE as outlined by Isaac et al. 2007 - 0 = LC, 1 = NT, 2 = VU, 3 = EN, 4 = CR
 # DD and unassessed species have no GE score and therefore no EDGE score but should be included with GE listed as NA
 
-load(file = "../Data/AcipenseridaeForEDGE.Rdata")
+load(file = "../Data/AcipenseridaeForEDGE.Rdata") # this is a list of the species and their rest list rankings
 species.GE <- data.a
 colnames(species.GE) <- c("Species", "Status", "GE")
 species.GE$Species <-  gsub(" ", "_", species.GE$Species)
@@ -72,8 +67,8 @@ edge.spp <- edge.spp[order(edge.spp$EDGE, decreasing = T, na.last = T),]
 
 
 # save the csvs
-write.csv(edge.scores, "../Data/ED_EDGE_scores_Acipenseridae.csv",row.names = F)
-write.csv(edge.spp, "../Data/EDGE_spp_Acipenseridae.csv",row.names = F)
+write.csv(edge.scores, "../Results/ED_EDGE_scores_Acipenseridae.csv",row.names = F)
+write.csv(edge.spp, "../Results/EDGE_spp_Acipenseridae.csv",row.names = F)
 
 # save the R data
 save(tree, species.GE, ed.scores,edge.scores,edge.spp, file = "../Data/EDGE_calculations_Acipenseridae.RData")
@@ -131,10 +126,14 @@ all.edge.data$max <- apply(all.edge.scores, 1, FUN=max)
 all.edge.data <- all.edge.data[,6:8]
 
 for (x in 1:25) {
-  if (all.edge.data$mins[x] != all.edge.data$max[x]) {
+  if (all.edge.data$mins[x] != all.edge.data$max[x]) {    
     print(x)
   }
 }
+
+# save the outputs
+write.csv(all.edge.scores, "../Results/100trees_ED_EDGE_scores_Acipenseridae.csv",row.names = F)
+write.csv(all.edge.data, "../Results/100trees_EDGE_spp_Acipenseridae.csv",row.names = F)
 
 
 #### THERE ARE THREE DIFFERENCES! 
@@ -180,7 +179,7 @@ graphics.off()
 
 # TREE is going to be the acipen tree 
 
-tree <- load(file = "AcipenTree.Rata")
+tree <- load(file = "../Data/AcipenTree.Rdata")
 
 tree <- Acipen.tree
 
@@ -203,29 +202,7 @@ pextPess <- c(0.2, 0.4, 0.8, 0.9, 0.99)
 # fuction: start with a dataframe with species & their red list assessment in 
 
 
-calculate.pext <- function(ext.risk, data) {
-  data <- isaac.data
-  data[,3] <- NA
-  colnames(data) <- c("Species", "Status", "pext")
-  for (i in 1:length(data$Species)) {
-    if (data[i,2] == "Least Concern") {
-      data$pext[i] <- ext.risk[1]
-    }
-    if (data[i, 2] == "Near Threatened") {
-      data$pext[i] <- ext.risk[2]
-    }
-    if (data[i,2] == "Vulnerable") {
-      data$pext[i] <- ext.risk[3]
-    }
-    if (data[i,2] == "Endangered") {
-      data$pext[i] <- ext.risk[4]
-    }
-    if (data[i,2] == "Critically Endangered") {
-      data$pext[i] <- ext.risk[5]
-  }
-  } 
-  return(data)
-  }
+source(file = "EDGE_functions.R")
 
 ### calculating pext for ISAAC
 isaac.data <- data.frame(matrix(ncol = 1, nrow = 25))
@@ -239,40 +216,11 @@ isaac.data <- calculate.pext(pextISAAC, isaac.data)
 
 ##### pextnct 
 
-ePD.loss.calc <- function(tree, pext){
-  require(phylobase)
-  require(data.table)
-  # converts tree to phylo4 object
-  if(!class(tree) == "phylo4"){
-    tree <- as(tree, "phylo4")
-  }
-  # create df for data
-  tree_dat <- data.frame(Species = as.character(unique(tipLabels(tree))), IWE = NA, TBL = NA, ED = NA, EDGE = NA)
-  # calculate IWE and TBL for each species
-  for(ii in 1:length(tipLabels(tree))){
-    nodes <- ancestors(tree, ii, type = "ALL")
-    root <- rootNode(tree)
-    nodes <- nodes[-which(nodes == root)]
-    a <- 0
-    for(i in nodes){
-      if(i == ii){
-        tree_dat$TBL[ii] <- edgeLength(tree)[getEdge(tree, ii)]
-      }else{
-        tips <- descendants(tree, nodes[nodes == i], "tips")
-        tips <- tips[-which(tips == ii)]
-        # calculate total pext to transform branch
-        a <- c(a,as.numeric(edgeLength(tree)[getEdge(tree, i)] * prod(pext$pext[pext$Species %in% tipLabels(tree)[tips]])))
-      }
-    }
-    tree_dat$IWE[ii] <- sum(a)
-    tree_dat$ED[ii] <- tree_dat$IWE[ii] + tree_dat$TBL[ii]
-    tree_dat$EDGE[ii] <- tree_dat$ED[ii]*pext$pext[pext$Species == tree_dat$Species[ii]]
-    head(tree_dat)
-    #print(ii)
-  }
-  return(tree_dat)
-}
 
 hedge_isaac <- ePD.loss.calc(Acipen.tree, isaac.data)
 
-#### now lets compare HEDGE & EDGE
+### save down 
+
+write.csv(hedge_isaac, "../Results/HEDGE_Acipenseridae.csv",row.names = F)
+
+
