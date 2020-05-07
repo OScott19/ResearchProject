@@ -22,6 +22,10 @@ require(phylobase)
 
 iter <- as.numeric(Sys.getenv("PBS_ARRAY_INDEX"))
 
+vals <- c(152,187)
+
+iter <- vals[iter]
+
 set.seed <- iter
 
 print(iter)
@@ -125,7 +129,7 @@ print("ED finished")
 
 print("Saving results")
 
-name_to_save <- paste("ED_only_HPC_24hr_", ptype, "_", tn, ".Rdata", sep = "")
+name_to_save <- paste("ED_only_HPC_24hr_", ptype, "_", tn, "LONG.Rdata", sep = "")
 
 save(res, file = name_to_save )
 

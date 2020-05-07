@@ -57,6 +57,10 @@ for (x in 1:length(Species$species)) {
     Species$category[x] <- red$redlistCategory[ref]
   } 
 }
+#########
+
+# load in the data that we need
+tree.to.load <- paste("Trees/Act_tree_updated_", tn, ".Rdata", sep = "")
 
 # now we replace species with the format that matches the tree
 Species$species <- gsub(" ", "_", Species$species)

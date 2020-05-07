@@ -7,7 +7,6 @@ graphics.off()
 setwd("~/Documents/ResearchProject/Code/")
 
 # set the seed as something random
-set.seed <- proc.time()[3]
 
 
 # first things first: packages
@@ -21,3 +20,168 @@ require(phytools)
 require(phylobase)
 
 ## now lets IMPORT THOSE DATAAAAAAAAAAAAA
+store.all <- list()
+
+for (i in 1:100) {
+  res <- NA
+  to.load <- paste("../Results/HPC_EDGE/EDGE_HPC_24hr_", i, ".Rdata", sep = "")
+  try(load(file = to.load), silent = F) # called res
+  store.all[[i]] <- res
+  }
+
+
+
+## for importing the data from the 36 hour run 
+
+
+vals <- c(6,7,8,9,10,13,19,21,59)
+
+for (i in 1:100) {
+  res <- NA
+  if (i %in% vals) {
+    to.load <- paste("../Results/HPC_EDGE/EDGE_HPC_36hr_", i, ".Rdata", sep = "")
+    load(file = to.load)
+    store.all[[i]] <- res
+  }
+}
+
+# now we're puting all the edge scores together
+all.edge.scores <- data.frame(matrix(nrow = length(store.all[[1]]$Species), ncol = 101))
+
+all.edge.scores[1] <- as.character(res[[1]]$Species)     
+
+for (i in 1:100) {
+  # select entry in the list
+  print(i)
+  res.use <- store.all[[i]]
+  if (!is.na(res.use)) {
+  for (j in 1:length(all.edge.scores$X1)) {
+    # match all ofthe species and enter into data.frame
+    ref <- match(all.edge.scores$X1[j], res.use[[1]]$Species)
+    all.edge.scores[j,(i + 1)] <- res.use[[1]]$EDGE[ref]
+    print(j)
+  }}}
+    
+save(all.edge.scores, file = "../Results/HPC_EDGE/EDGEScores_100.Rdata")
+
+## to add in the vals from the 36hr run:
+# first, load in the data
+
+load(file = "../Results/HPC_EDGE/EDGEScores_100.Rdata")
+
+for (i in 1:100) {
+  print(i)
+  if (i %in% vals) {
+    res.use <- store.all[[i]]
+    for (j in 1:length(all.edge.scores$X1)) {
+      # match all ofthe species and enter into data.frame
+      ref <- match(all.edge.scores$X1[j], res.use[[1]]$Species)
+      all.edge.scores[j,(i + 1)] <- res.use[[1]]$EDGE[ref]
+  }
+}}
+
+# change data to longform to plot
+library(tidyr)
+
+
+all.edge.scores$meanEDGE <-  rowMeans(all.edge.scores[,c(2:101)], na.rm = T)
+all.edge.scores$medianEDGE <- apply(all.edge.scores[,c(2:101)], MARGIN = 1, FUN = median)
+
+
+# save all.edge.scores down again!
+
+save(all.edge.scores, file = "../Results/HPC_EDGE/EDGEScores_100.Rdata")
+
+
+#### now lets calculate PD loss!
+
+pd.loss <- data.frame(matrix(nrow = 100, ncol = 4))
+colnames(pd.loss) <- c("TreeNo", "TreePD", "PDLoss", "ePD")
+pd.loss$TreeNo <- c(1:100)
+
+# step one - read in all the 100 trees, calculate their original PD and add it to the dataframe
+
+for (i in 1:100) {
+  to.load <- paste("../Data/UpdatedTrees/Act_tree_updated_", i, ".Rdata", sep = "")
+  try(load(file = to.load), silent = F) # called res
+  # calcualte PD in the tree
+  tree.pd <- sum(tree$edge.length)
+  pd.loss$TreePD <- tree.pd
+}
+
+# step two - calculate the pd loss in each tree
+
+for (i in 1:100) {
+  if (!is.na(store.all[[i]][2])) {
+    tree.use <- store.all[[i]][[2]]
+    pd <- sum(tree.use$edge.length)
+    pd.loss$PDLoss[i] <- pd
+    }}
+
+
+pd.loss$ePD <- pd.loss$TreePD - pd.loss$PDLoss
+pd.loss$lossPercentage <- pd.loss$PDLoss / pd.loss$TreePD * 100
+
+save(pd.loss, file = "../Results/HPC_EDGE/PDLoss_100.Rdata")
+
+##
+
+
+ 
+
+# find the top20 species
+top.20.spp <- subset(all.edge.scores, all.edge.scores$meanEDGE >= 9)
+
+top.20.median <- top.20.spp[order(top.20.spp$medianEDGE, decreasing = T),]
+top.20.spp <- top.20.median
+
+no <- c()
+
+for (x in 1:9) {
+  temp <- paste(0, x, sep = "")
+  no <- c(no, temp)
+}
+
+numbers <- c(no, 10:20)
+
+names <- c()
+for (i in 1:20){
+  temp <- paste(numbers[i], top.20.spp$X1[i], sep = "_")
+  names <- c(names, temp)
+}
+
+
+# now putting the data into longform
+
+long.df <- data.frame(Species = rep(names, 100), EDGE = NA)
+
+ledge <- c()
+
+for (i in 2:101) {
+  temp <- as.vector(top.20.spp[,i])
+  ledge <- c(ledge, temp)
+}
+
+long.df$EDGE <- ledge
+
+
+# now plot
+axislabels <- gsub("_", " ", top.20.median$X1)
+
+graphics.off()
+plot.new()
+pdf("../Results/Top20Species.pdf")
+par(mar = c(15,4,2,1))
+boxplot(long.df$EDGE ~ long.df$Species, 
+        main = "Range in EDGE2 scores of top 20 Actinopterygii Species",
+        frame = F, 
+        col = "steelblue",
+        xlab = NA,
+        ylab = "EDGE2 Score",
+        xaxt = 'n')
+
+axis(side = 1, at = 1:20, labels = axislabels, las = 2)
+dev.off()
+
+
+

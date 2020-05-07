@@ -14,6 +14,7 @@ set.seed <- iter
 vals <- c(6,7,8,9,10,13,19,21,59)
 
 iter <- vals[iter]
+print(iter)
 
 # first things first: packages
 
@@ -48,7 +49,7 @@ pext$pext <- pext.100[,(iter + 1)]
 # pext - the pext of each species
 # iteration - the numeric value to be assigned to the run - e.g. the i in a for loop of 'i in 1:n'
 
-EDGE.2.calc <- function(tree, pext, iteration){
+EDGE.2.calc <- function(tree, pext){
   require(phylobase)
   require(data.table)
   require(caper)
@@ -74,14 +75,14 @@ EDGE.2.calc <- function(tree, pext, iteration){
     tips <- names(tips)
     tipscores <- which(pext$species %in% tips)
     tree@edge.length[which(tree@edge[,2] == nodes[i])] <- edgeLength(tree, nodes[i])*prod(pext$pext[tipscores])
-    print(paste("Node",i,"of",length(nodes),"transformed!","For iteration",iteration, sep = " "))
+    print(paste("Node",i,"of",length(nodes),"transformed!", sep = " "))
   }
   #plot(tree)
   for(i in 1:length(tree_dat$Species)){
     tree_dat$EDGE[i] <- sum(tree@edge.length[which(tree@edge[,2] %in% ancestors(tree, 
                                                                                 which(tipLabels(tree) == tree_dat$Species[i]), "ALL"))], na.rm=T)
     tree_dat$ED[i] <- tree_dat$EDGE[i] / tree_dat$pext[i] 
-    print(paste("EDGE 2.0 calculated for species",i,"of",length(tipLabels(tree)),"!","For iteration",iteration,sep=" ")) 
+    print(paste("EDGE 2.0 calculated for species",i,"of",length(tipLabels(tree)),"!",sep=" ")) 
   }
   tree <- as(tree, "phylo")
   edge.res <- list(tree_dat,tree)
@@ -99,7 +100,7 @@ print("EDGE finished")
 
 print("Saving results")
 
-name_to_save <- paste("EDGE_HPC_24hr_", iter, ".Rdata", sep = "")
+name_to_save <- paste("EDGE_HPC_36hr_", iter, ".Rdata", sep = "")
 
 save(res, file = name_to_save )
 
