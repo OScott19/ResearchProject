@@ -510,7 +510,7 @@ x <- as.integer(red.check[[y]][1])
 # checker
 red.validated$validated[x] %in% fishbase$Species
 
-save(red.validated, add.to.fb, file = "UpdatedValidSpp.Rdata")
+save(red.validated, tree.validated, total.add, file = "UpdatedValidSpp.Rdata")
 # next one
 
 length(red.check)
@@ -586,17 +586,29 @@ tree.validated$validated[21262] <- "Brycinus batesii"
 tree.validated$validated[21290] <- "Brycinus schoutedeni"
 tree.validated$validated[21334] <- "" # synonym already in db (Alestopetersius compressus)
 tree.validated$validated[21339] <- "" # synonym already in db (Alestopetersius nigropterus)
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
-tree.validated$validated[]
+tree.validated$validated[21657] <- "" # synonym already in db (Astyanax jordani)
+tree.validated$validated[21721] <- "" # not a defined species
+tree.validated$validated[22538] <- "Roeboides affinis"
+tree.validated$validated[23296] <- "" # not a defined species
+tree.validated$validated[23648] <- "" # no synonym, not Corydoras multimaculatus as in tehre seperately
+tree.validated$validated[23727] <- "" # synonym (Corydoras kronei) not in fb
+tree.validated$validated[25113] <- "" # synonym (Netuma proxima) already in list
+tree.validated$validated[25219] <- "" # synonmy (Ariopsis coatesi) not recognised
+tree.validated$validated[25220] <- "" # synnym (Neoarius latirostris) already in fb
+tree.validated$validated[25222] <- "" # synonym (Neoarius velutinus) already in fb
+tree.validated$validated[26961] <- "" # synonym (Glyptothorax zanaensis) already in fb
+tree.validated$validated[27341] <- "" # synonym (Yasuhikotakia lecontei) already in fb
+tree.validated$validated[27523] <- "" # not a defined species
+tree.validated$validated[27544] <- "" # synonym already in fb (Cobitis pacifica)
+tree.validated$validated[27548] <- "" # synonym a) already in fb (Cobitis multifasciata) synonym b) Cobitis multifasciata isn't used
+tree.validated$validated[28965] <- "Bangana behri"
+tree.validated$validated[29515] <- "" # synon ym alraedy validated list 
+tree.validated$validated[29851] <- "" # synonym (Pseudophoxinus callensis) already in validated list
+tree.validated$validated[30470] <- "Systomus orphoides"
+tree.validated$validated[30706] <- "" # synonym (Lepidocephalichthys guntea) in validated list
+tree.validated$validated[31495] <- "" # synonym (Scleropages formosus) in validated list
+tree.validated$validated[31499] <- "" # ambig synonym of S. formosus also - not recognised alone
+tree.validated$validated[31501] <- "" # also ambig synonym
 
 
 tree.validated$validated[x] %in% fishbase$Species # need to return true
@@ -604,7 +616,7 @@ tree.validated$validated[x] %in% fishbase$Species # need to return true
 tree.validated$validated[x] %in% tree$scientificName # ideally return false
 
 
-y <- 43
+y <- 67
 tree.check[[y]]
 x <- as.integer(tree.check[[y]][1])
 
@@ -617,87 +629,65 @@ tree.to.fb <-c("Gobiopterus smithi")
 # (inc. the few from fb I need to add in) and do the imputations - check with Rikki
 # if there is a source of 1000 Actinopt trees, or whether I just use the 100 I have randomly. 
 
+total.add <- c(tree.to.fb, add.to.fb)
 
 
 
+############################# now create the master species list 
 
+fml <- data.frame(Species = c(fishbase$Species, total.add),
+                               RLScore = NA, TreeSpp = NA, Impute = NA)
 
+fml$Species <- as.character(fml$Species)
 
+to.impute <- subset(fml, (fml$Species %in% tree.validated$validated == F)) # 1691 species
 
+red$validated <- red.validated$validated
 
+for (i in 1:length(fml$Species)) {
+  if (i %% 100 == 0) {
+    print(i)
+  }
+  ref <- match(fml$Species[i], red$validated)
+  if (length(ref) != 0) {
+    fml$RLScore[i] <- red$redlistCategory[ref]
+  }
+}
 
+###
 
+for (i in 1:length(fml$Species)) {
+  if (i %% 100 == 0) {
+    print(i)
+  }
+  ref <- match(fml$Species[i], tree.validated$validated)
+  if (length(ref) != 0) {
+    fml$TreeSpp[i] <- tree.validated$tree[ref]
+  }
+}
 
+###
+
+fml$Impute <- 1
+
+for (i in 1:length(fml$Species)) {
+  if (fml$Species[i] %in% tree.validated$validated) {
+    fml$Impute[i] <- 0
+  }
+}
+
+sum(fml$Impute) # 1691 species to impute. Phew! 
 
 
 ##############
 
-# now let's re-check the overlap
+# facts & figures - comparing the overlaps 
 
-length(intersect(tree.validated$validated, C2$scientificName)) #1165
-length(tree.validated$validated) # 1192
-length(unique(tree.validated$validated)) # 1116 - worth noting that we still have 10 entries that are NA
+length(intersect(tree.validated$validated, fishbase$Species)) #31187
+length(tree.validated$validated) # 31516
+length(unique(tree.validated$validated)) # 31190 - worth noting that we still have 10 entries that are NA
 
+####
 
-##############
-
-
-c2.red.v <- intersect(C2$scientificName, red.val2) # 1102 overlap
-c2.tree.v <- intersect(C2$scientificName, tree.val2) # 1162 validated
-
-###################
-
-# so, what species do we need to impute? Species that are found in C2 but *not* in the tree
-
-to.impute <- subset(C2, (C2$scientificName %in% tree.validated$validated == F)) # 125 species
-
-#####################################
-#############################################
-
-# Putting it all together
-
-### Assuming the fishbase species list (C2) is correct:
-### Remove the species from the tree that cannot be found in fishbase (the 10 'NA' species)
-### Rename the species in the tree so their names match the species in fishbase
-### Add in the missing species to the tree - IMPUTATION! 
-### Create a df with all of the fish-base species and their associated Red List scores (or, assign an NA if they don't have one)
-
-master.list <- data.frame(Species = C2$scientificName, RLScore = NA, TreeSpp = NA, Impute = NA)
-master.list$Species <- as.character(master.list$Species)
-
-chond.red$validated <- red.validated$validated
-
-# add in the RL assessment
-
-for (i in 1:length(master.list$Species)) {
-  ref <- match(master.list$Species[i], chond.red$validated)
-  if (length(ref) != 0) {
-    master.list$RLScore[i] <- chond.red$redlistCategory[ref]
-  }
-}
-
-# now add the names of that species in the tree
-
-for (i in 1:length(master.list$Species)) {
-  ref <- match(master.list$Species[i], tree.validated$validated)
-  if (length(ref) != 0) {
-    master.list$TreeSpp[i] <- tree.validated$tree[ref]
-  }
-}
-
-
-master.list$Impute <- 1
-
-for (i in 1:length(master.list$Species)) {
-  if (master.list$Species[i] %in% tree.validated$validated) {
-    master.list$Impute[i] <- 0
-  }
-}
-
-## link up the names of the species in the tree and the names of the fishbase species
-
-
-
-save(master.list, file = "Data/AllSpecies.Rdata")
-save(red.validated, tree.validated, Redonly2, Treeonly2, to.impute, file = "TaxMatchingResults.Rdata")
+save(fml, file = "FishAllSpecies.Rdata")
 
